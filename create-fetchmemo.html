@@ -290,54 +290,72 @@
                         <table class="table table-dashed">
                           <thead>
                             <tr class="bg-light">
-                              <th scope="col" class="text-center"><input type="checkbox" name="selectAll" id="checkbox1"></th>
-                              <th scope="col" class="text-center">InvoiceNumber</th>
-                              <th scope="col" class="text-center">Consignee</th>
-                              <th scope="col" class="text-center">Consigner</th>
-                              <th scope="col" class="text-center">Quantity</th>
-                              <th scope="col" class="text-center">SerialNumber</th>
+                                <th scope="col" class="text-center">
+                                    <input type="checkbox" id="selectAll">
+                                </th>
+                              <th scope="col" class="text-center">Fetch Number</th>
+                              <th scope="col" class="text-center">Transport Name</th>
+                              <th scope="col" class="text-center">Charges</th>
+                              <th scope="col" class="text-center">Detention Charges</th>
+                              <th scope="col" class="text-center">TDS Deduction Charges</th>
+                              <th scope="col" class="text-center">Micilleues Charges</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <th scope="row" class="text-center table-data"><input type="checkbox" name="selectAll" id="checkbox1"></th>
+                                <td class="text-center">
+                                    <input type="checkbox" class="rowCheckbox">
+                                </td>
                               <td class="text-center table-data">Aries</td>
                               <td class="text-center table-data">Gym</td>
-                              <td class="text-center table-data">Energetic</td>
-                              <th scope="col" class="text-center">1</th>
+                              <td class="text-center table-data">23</td>
+                              <th scope="col" class="text-center">45</th>
+                              <th scope="col" class="text-center">852096</th>
                               <th scope="col" class="text-center">852096</th>
                              
                             </tr>
                             <tr>
-                              <th scope="row" class="text-center table-data"><input type="checkbox" name="selectAll" id="checkbox1"></th>
+                                <td class="text-center">
+                                    <input type="checkbox" class="rowCheckbox">
+                                </td>
                               <td class="text-center table-data">Taurus</td>
                               <td class="text-center table-data">Dance</td>
-                              <td class="text-center table-data">Reliable, patient, and practical; enjoys comfort and material pleasures.</td>
-                              <th scope="col" class="text-center">1</th>
+                              <td class="text-center table-data">569</td>
+                              <th scope="col" class="text-center">23</th>
+                              <th scope="col" class="text-center">852096</th>
                               <th scope="col" class="text-center">852096</th>
                             </tr>
                             <tr>
-                              <th scope="row" class="text-center table-data"><input type="checkbox" name="selectAll" id="checkbox1"></th>
+                                <td class="text-center">
+                                    <input type="checkbox" class="rowCheckbox">
+                                </td>
                               <td class="text-center table-data">Gemini</td>
                               <td class="text-center table-data">Boxing</td>
-                              <td class="text-center table-data">Curious, adaptable, and communicative; loves socializing and learning new things.</td>
-                              <th scope="col" class="text-center">1</th>
+                              <td class="text-center table-data">5698</td>
+                              <th scope="col" class="text-center">20</th>
+                              <th scope="col" class="text-center">852096</th>
                               <th scope="col" class="text-center">852096</th>
                             </tr>
                             <tr>
-                              <th scope="row" class="text-center table-data"><input type="checkbox" name="selectAll" id="checkbox1"></th>
+                                <td class="text-center">
+                                    <input type="checkbox" class="rowCheckbox">
+                                </td>
                               <td class="text-center table-data">Cancer</td>
                               <td class="text-center table-data">Gym</td>
-                              <td class="text-center table-data">Nurturing, intuitive, and protective; values home and emotional connections.</td>
-                              <th scope="col" class="text-center">1</th>
+                              <td class="text-center table-data">45552</td>
+                              <th scope="col" class="text-center">30</th>
+                              <th scope="col" class="text-center">852096</th>
                               <th scope="col" class="text-center">852096</th>
                             </tr>
                             <tr>
-                              <th scope="row" class="text-center table-data"><input type="checkbox" name="selectAll" id="checkbox1"></th>
+                                <td class="text-center">
+                                    <input type="checkbox" class="rowCheckbox">
+                                </td>
                               <td class="text-center table-data">Leo</td>
                               <td class="text-center table-data">Yoga</td>
-                              <td class="text-center table-data">Charismatic, confident, and creative; seeks attention and loves to shine</td>
-                              <th scope="col" class="text-center">1</th>
+                              <td class="text-center table-data">46255</td>
+                              <th scope="col" class="text-center">12</th>
+                              <th scope="col" class="text-center">852096</th>
                               <th scope="col" class="text-center">852096</th>
                             </tr>
                           </tbody>
@@ -349,7 +367,7 @@
               </div>
              <div class="row text-center">
                 <div class="col">
-                    <button class="btn btn-primary" type="submit">Create LR</button>
+                    <a class="btn btn-primary" type="submit" href="fetch-memo.html">Create Fetch Memo</a>
                 </div>
              </div>
               <!-- Daily Entry Table Start -->
@@ -400,5 +418,26 @@
     <script src="/assets/js/script.js"></script> 
     <script src="/assets/view-js/filter.js"></script> 
     <!-- <script src="/assets/js/theme-customizer/customizer.js"></script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const selectAllCheckbox = document.getElementById("selectAll");
+            const rowCheckboxes = document.querySelectorAll(".rowCheckbox");
+    
+            // Toggle all checkboxes when the header checkbox is clicked
+            selectAllCheckbox.addEventListener("change", function () {
+                rowCheckboxes.forEach(checkbox => {
+                    checkbox.checked = selectAllCheckbox.checked;
+                });
+            });
+    
+            // Check if all checkboxes are checked/unchecked
+            rowCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener("change", function () {
+                    const allChecked = Array.from(rowCheckboxes).every(cb => cb.checked);
+                    selectAllCheckbox.checked = allChecked;
+                });
+            });
+        });
+    </script>
   </body>
 </html>

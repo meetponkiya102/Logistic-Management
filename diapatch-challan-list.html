@@ -185,9 +185,11 @@
   
                   <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                       <i class="fa fa-users text-white" aria-hidden="true"></i>
-                      <span class="lan-8">Freignt Memo</span></a>
+                      <span class="lan-8">Fetch Memo</span></a>
                     <ul class="sidebar-submenu">
-                      <li><a href="freignt-memo.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Freignt Memo</a></li>
+                      <li><a href="fetch-memo.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Fetch Memo</a></li>
+                      <li><a href="create-fetchmemo.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Create Fetch Memo</a></li>
+                      <li><a href="fetch-memo-list.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Fetch Memo List</a></li>
                     </ul>
                   </li>
                 
@@ -348,9 +350,9 @@
                             <td class="text-center table-data">12box</td>
                             <td class="text-center table-data">45.2kg</td>
                             <td class="text-center col-fix table-data"> 
-                              <ul class="action d-flex justify-content-center"> 
-                                <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li> 
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
+                              <ul class="action d-flex justify-content-center gap-2"> 
+                                <li class="view"><a href="#" class="bg-primary p-2 rounded"><i class="fa fa-eye text-white" data-bs-toggle="modal" data-bs-target="#detailsModal" aria-hidden="true"></i></a></li> 
+                                <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
                               </ul>
                             </td>
                           </tr>
@@ -410,6 +412,31 @@
         </footer>
       </div>
     </div>
+    <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="viewModalLabel">Fetch Memo Details</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <p><strong>LR Number:</strong> <span id="modalName"></span></p>
+                  <p><strong>Consigner:</strong> <span id="modalCode"></span></p>
+                  <p><strong>Consignee:</strong> <span id="modalCharges"></span></p>
+                  <p><strong>LR Date:</strong> <span id="modalDetectionCharges"></span></p>
+                  <p><strong>Transport:</strong> <span id="modalTDSDeductionPerson"></span></p>
+                  <p><strong>Truck Driver:</strong> <span id="modalMicilleues"></span></p>
+                  <p><strong>Quentity:</strong> <span id="modalQuentity"></span></p>
+                  <p><strong>Weight:</strong> <span id="modalWeight"></span></p>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
     <!-- latest jquery-->
     <script src="/assets/js/jquery.min.js"></script>
     <!-- Bootstrap js-->
@@ -440,5 +467,46 @@
     <script src="/assets/js/script.js"></script> 
     <script src="/assets/view-js/filter.js"></script>
     <!-- <script src="/assets/js/theme-customizer/customizer.js"></script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          // Select all view buttons inside <li class="view">
+          const viewButtons = document.querySelectorAll(".view a");
+  
+          viewButtons.forEach(button => {
+              button.addEventListener("click", function (event) {
+                  event.preventDefault(); // Prevent default anchor behavior
+                  
+                  // Find the closest table row
+                  const row = this.closest("tr");
+                  
+                  if (row) {
+                      // Get text content from respective columns
+                      const name = row.querySelector("td:nth-child(2)").textContent.trim();
+                      const code = row.querySelector("td:nth-child(3)").textContent.trim();
+                      const Charges = row.querySelector("td:nth-child(4)").textContent.trim();
+                      const DetectionCharges = row.querySelector("td:nth-child(5)").textContent.trim();
+                      const TDSDeductionPerson = row.querySelector("td:nth-child(6)").textContent.trim();
+                      const MicilleuesCharges = row.querySelector("td:nth-child(7)").textContent.trim();
+                      const Quentity = row.querySelector("td:nth-child(8)").textContent.trim();
+                      const Weight = row.querySelector("td:nth-child(9)").textContent.trim();
+  
+                      // Set modal content
+                      document.getElementById("modalName").textContent = name;
+                      document.getElementById("modalCode").textContent = code;
+                      document.getElementById("modalCharges").textContent = Charges;
+                      document.getElementById("modalDetectionCharges").textContent = DetectionCharges;
+                      document.getElementById("modalTDSDeductionPerson").textContent = TDSDeductionPerson;
+                      document.getElementById("modalMicilleues").textContent = MicilleuesCharges;
+                      document.getElementById("modalQuentity").textContent = Quentity;
+                      document.getElementById("modalWeight").textContent = Weight;
+                  }
+  
+                  // Show the modal manually (Bootstrap 5)
+                  const modal = new bootstrap.Modal(document.getElementById("viewModal"));
+                  modal.show();
+              });
+          });
+      });
+  </script>
   </body>
 </html>
