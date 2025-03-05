@@ -40,6 +40,7 @@
     <link id="color" rel="stylesheet" href="/assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/view-css/filter.css">
   </head>
   <body> 
     <!-- loader starts-->
@@ -103,105 +104,145 @@
       <div class="page-body-wrapper">
         <!-- Page Sidebar Start-->
         <div class="sidebar-wrapper" data-layout="stroke-svg">
-          <div class="logo-wrapper"><a href="index.html"><img class="img-fluid w-75" src="/assets/images/logo/logo-unique_it.webp" alt=""></a>
-            <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
-            <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
-          </div>
-          <div class="logo-icon-wrapper"><a href="index.html"></a></div>
-          <nav class="sidebar-main">
-            <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
-            <div id="sidebar-menu">
-              <ul class="sidebar-links" id="simple-bar">
-                <li class="back-btn"><a href="index.html"><img class="img-fluid" src="/assets/images/logo/logo-icon.png" alt=""></a>
-                  <div class="mobile-back text-end"> <span>Back </span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
-                </li>
-                <li class="pin-title sidebar-main-title">
-                  <div> 
-                    <h6>Pinned</h6>
-                  </div>
-                </li>
-                <li class="sidebar-main-title">
-                  <div>
-                    <h6 class="lan-1">General</h6>
-                  </div>
-                </li>
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"> </i>
-                  <a class="sidebar-link" href="index.html">
-                  <i class="fa fa-tachometer text-white" aria-hidden="true"></i>
-                  <span class="lan-2">Dasboard</span></a>
-                </li>
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                    <i class="fa fa-balance-scale text-white" aria-hidden="true"></i>
+            <div class="logo-wrapper"><a href="index.html"><img class="img-fluid w-75" src="/assets/images/logo/logo-unique_it.webp" alt=""></a>
+              <div class="back-btn"><i class="fa fa-angle-left"> </i></div>
+              <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
+            </div>
+            <div class="logo-icon-wrapper"><a href="index.html"></a></div>
+            <nav class="sidebar-main">
+              <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+              <div id="sidebar-menu">
+                <ul class="sidebar-links" id="simple-bar">
+                  <li class="back-btn"><a href="index.html"><img class="img-fluid" src="/assets/images/logo/logo-icon.png" alt=""></a>
+                    <div class="mobile-back text-end"> <span>Back </span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
+                  </li>
+                  <li class="pin-title sidebar-main-title">
+                    <div> 
+                      <h6>Pinned</h6>
+                    </div>
+                  </li>
+                  <li class="sidebar-main-title">
+                    <div>
+                      <h6 class="lan-1">General</h6>
+                    </div>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"> </i>
+                    <a class="sidebar-link" href="index.html">
+                    <i class="fa fa-tachometer text-white" aria-hidden="true"></i>
+                    <span class="lan-2">Dasboard</span></a>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-truck text-white" aria-hidden="true"></i>
                       <span class="lan-3">Vehicle</span></a>
                     <ul class="sidebar-submenu">
                       <li><a href="add-vehicle.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add Vehicle</a></li>
-                      <li><a href="vehicle-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i>Vehicle List</a></li>
+                      <li><a href="vehicle-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Vehicle List</a></li>
                     </ul>
-                </li>
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa fa-calendar text-white" aria-hidden="true"></i>
-                    <span class="lan-4">Weekly Horoscope</span></a>
-                  <ul class="sidebar-submenu">
-                    <li><a href="add-weekly-signature.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add Weekly Horoscope</a></li>
-                    <li><a href="weekly-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Weekly Horoscope List</a></li>
-                  </ul>
-                </li>
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa fa-server text-white" aria-hidden="true"></i>
-                    <span class="lan-6">News Category</span></a>
-                  <ul class="sidebar-submenu">
-                    <li><a href="add-news-category.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add News Category</a></li>
-                    <li><a href="news-category-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> News Category List</a></li>
-                  </ul>
-                </li>
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa fa-newspaper-o text-white" aria-hidden="true"></i>
-                  <span class="lan-5">News</span></a>
-                  <ul class="sidebar-submenu">
-                    <li><a href="add-news.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add News</a></li>
-                    <li><a href="news-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> News List</a></li>
-                    <li><a href="top-news.html"><i class="fa fa-angle-double-up text-white" aria-hidden="true"></i> Top News</a></li>
-                  </ul>
-                </li>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-calendar text-white" aria-hidden="true"></i>
+                      <span class="lan-4">Driver</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-driver.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add Driver</a></li>
+                      <li><a href="driver-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Driver List</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-server text-white" aria-hidden="true"></i>
+                      <span class="lan-6">Labour</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-labour.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add Labour</a></li>
+                      <li><a href="labour-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Labour List</a></li>
+                      <li><a href="labour-payment-report.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Labour Payment Report</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-newspaper-o text-white" aria-hidden="true"></i>
+                    <span class="lan-5">Transporter</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-transporter.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add Transporter</a></li>
+                      <li><a href="transporter-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Transporter List</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-briefcase text-white" aria-hidden="true"></i>
+                    <span class="lan-7">Dispatch Challan</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-dispatch-challan.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add Dispatch Challan</a></li>
+                      <li><a href="diapatch-challan-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Dispatch Challan List</a></li>
+                    </ul>
+                  </li>
+  
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                      <i class="fa fa-users text-white" aria-hidden="true"></i>
+                      <span class="lan-8">Freignt Memo</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="freignt-memo.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Freignt Memo</a></li>
+                    </ul>
+                  </li>
                 
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa fa-briefcase text-white" aria-hidden="true"></i>
-                  <span class="lan-7">Property</span></a>
-                  <ul class="sidebar-submenu">
-                    <li><a href="add-peoperty.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add Property</a></li>
-                    <li><a href="property-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Property List</a></li>
-                    <li><a href="latest-property.html"><i class="fa fa-clock-o text-white" aria-hidden="true"></i> Latest Property</a></li>
-                  </ul>
-                </li>
-
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                    <i class="fa fa-users text-white" aria-hidden="true"></i>
-                    <span class="lan-8">Team Details</span></a>
-                  <ul class="sidebar-submenu">
-                    <li><a href="add-team-member.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add Team Member</a></li>
-                    <li><a href="team-member-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Team List</a></li>
-                  </ul>
-                </li>
-              
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">User Deatail</span></a>
-                  <ul class="sidebar-submenu">
-                    <li><a href="user-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> User List</a></li>
-                  </ul>
-                </li>
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa fa-file-text text-white" aria-hidden="true"></i>
-                  <span class="lan-10">Details</span></a>
-                  <ul class="sidebar-submenu">
-                    <li><a href="add-details.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add Team Member</a></li>
-                    <!-- <li><a href="team-member-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Team List</a></li> -->
-                  </ul>
-                </li>
-              <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
-            </div>
-          </nav>
-        </div>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-user text-white" aria-hidden="true"></i>
+                      <span class="lan-9">Rate</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="rate-by-transporter.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Rate By Transporter</a></li>
+                      <li><a href="rate-per-labour.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Rate Per Labour</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-user text-white" aria-hidden="true"></i>
+                      <span class="lan-9">Consignee</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-consignee.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Consignee</a></li>
+                      <li><a href="consignee-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Consignee List</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-user text-white" aria-hidden="true"></i>
+                      <span class="lan-9">Consignor</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-consigner.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Consignor</a></li>
+                      <li><a href="consigner-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Consignor List</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-user text-white" aria-hidden="true"></i>
+                      <span class="lan-9">Custmor</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-customer.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Custmor</a></li>
+                      <li><a href="customer-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Custmor List</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-user text-white" aria-hidden="true"></i>
+                      <span class="lan-9">Invoice</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-invoice.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Invoice</a></li>
+                      <li><a href="invoice-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Invoice List</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-user text-white" aria-hidden="true"></i>
+                      <span class="lan-9">Lori Report</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LoriReport</a></li>
+                      <li><a href="lori-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LoriReport List</a></li>
+                      <li><a href="LR-Creation.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LoriReport Cretion</a></li>
+                    </ul>
+                  </li>
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-user text-white" aria-hidden="true"></i>
+                      <span class="lan-9">Warehouse</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-warehouse.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Warehouse</a></li>
+                      <li><a href="warehouse-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Warehouse List</a></li>
+                    </ul>
+                  </li>
+                <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+              </div>
+            </nav>
+          </div>
         <!-- Page Sidebar Ends-->
         <div class="page-body">
           <div class="container-fluid">
@@ -225,6 +266,47 @@
           </div>
           <!-- Container-fluid starts-->
           <div class="container-fluid">
+            <div class="row">
+                <!--  er Button Start -->
+                 <div class="col-lg-12 d-flex justify-content-start ms-md-auto mb-3">
+                    <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="tooltip" title="btn btn-success btn-lg" id="filter-button">
+                      <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="filter" >
+                          <polygon fill="none" stroke="white" stroke-miterlimit="10" stroke-width="4" points="2 6 2 10 26 34 26 58 38 58 38 34 62 10 62 6 2 6"></polygon>
+                        </svg>
+                      </div>
+                      <div class="text-white" id="text"><span>Filter</span></div>
+                    </button>
+                  </div>
+                 <!-- Filter Button End -->
+              </div>
+              <div class="row" id="filter-form">
+                <!-- Filter Form Start -->
+                <div class="col-sm-12">
+                  <div class="card height-equal">
+                    <div class="card-body basic-wizard important-validation">
+                      <div id="msform">
+                        <form class="stepper-one row needs-validation custom-input" novalidate="">
+                          <div class="col-sm-6">
+                            <label class="form-label" for="ConsigneeName">Driver Name</label>
+                            <input class="form-control w-100 rounded border" type="text" placeholder="Enter Driver Name" id="ConsigneeName">
+                          </div>
+                          <div class="col-sm-6">
+                            <label class="form-label" for="ConsigneeTown">Liecence No.</label>
+                            <input class="form-control w-100 rounded border" type="text" placeholder="Enter Liecence Number" id="ConsigneeTown">
+                          </div>
+                          <div class="wizard-footer mt-2 d-flex gap-2 justify-content-end">
+                            <button class="btn btn-primary" type="submit">Search</button>
+                            <button class="btn btn-dark" type="reset">Reset</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Filter Form end -->
+              </div>
+           <div class="row">
             <div class="col-sm-12">
               <div class="card">
                 <div class="card-block row">
@@ -295,6 +377,7 @@
                     </div>
                   </div>
                 </div>
+            </div>
               </div>
             </div>
           </div>
@@ -340,6 +423,7 @@
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="/assets/js/script.js"></script> 
+    <script src="/assets/view-js/filter.js"></script>
     <!-- <script src="/assets/js/theme-customizer/customizer.js"></script> -->
   </body>
 </html>
