@@ -217,7 +217,7 @@
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h4>Add Vehicle</h4>
+                  <h4>Add Invoice</h4>
                 </div>
                 <div class="col-6"> 
                   <ol class="breadcrumb">
@@ -225,8 +225,8 @@
                         <svg class="stroke-icon">
                           <use href="/assets/svg/icon-sprite.svg#stroke-home"></use>
                         </svg></a></li>
-                    <li class="breadcrumb-item">Vehicle</li>
-                    <li class="breadcrumb-item active">Add Vehicle</li>
+                    <li class="breadcrumb-item">Invoice</li>
+                    <li class="breadcrumb-item active">Add Invoice</li>
                   </ol>
                 </div>
               </div>
@@ -244,53 +244,117 @@
                           <div class="tab-content" id="wizard-tabContent">
                             <div class="tab-pane fade show active px-4" id="wizard-contact" role="tabpanel" aria-labelledby="wizard-contact-tab">
                               <form class="needs-validation custom-input" novalidate="">
-                                <!-- <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="member-name">Full Name<span class="txt-danger">*</span></label>
-                                  <input class="form-control col-lg-10" type="text" placeholder="Enter Full Name" id="member-name">
-                                </div>   -->
                                 <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="VehicalNumber">Vehicle Number<span class="txt-danger">*</span></label>
-                                  <input class="form-control col-lg-4" type="number" placeholder="Enter Vehicle Number" id="VehicalNumber">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="VehicalType">Vehical Type<span class="txt-danger">*</span></label>
-                                  <select name="" id="VehicalType" class="form-control col-lg-4">
-                                    <option value="">Select Vehical Type</option>
-                                    <option value="">Truck</option>
-                                    <option value="">Tempo</option>
-                                    <option value="">Eicher</option>
-                                  </select>
-                                </div>
-                                <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="RegistrationNumber">RegistrationNumber<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="number" placeholder="Enter Registration Number" id="RegistrationNumber">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="VehicalType">Transporter Name<span class="txt-danger">*</span></label>
-                                    <select name="" id="VehicalType" class="form-control col-lg-4">
-                                      <option value="">Select Transporter Name</option>
-                                      <option value="">Rahul</option>
-                                      <option value="">Brijesh</option>
-                                      <option value="">Arpit</option>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="CustomerName">Customer<span class="txt-danger">*</span></label>
+                                    <select name="" id="CustomerName" class="form-control col-lg-10">
+                                        <option value="">Select Customer Name</option>
+                                        <option value="">abc</option>
+                                        <option value="">def</option>
+                                        <option value="">xyz</option>
                                     </select>
                                 </div>
                                 <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Owner Name<span class="txt-danger">*</span></label>
-                                  <input class="form-control col-lg-4" type="text" placeholder="Enter Owner Name" id="txtOwnerName">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtPermitDetails">Permit Details<span class="txt-danger">*</span></label>
-                                  <input class="form-control col-lg-4" type="text" placeholder="Enter Permit Details" id="txtPermitDetails">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneeName">Consognee<span class="txt-danger">*</span></label>
+                                    <select name="" id="ConsogneeName" class="form-control col-lg-4">
+                                        <option value="">Select Consognee Name</option>
+                                        <option value="">abc</option>
+                                        <option value="">def</option>
+                                        <option value="">xyz</option>
+                                    </select>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="consignorName">Consigner<span class="txt-danger">*</span></label>
+                                    <select name="" id="consignorName" class="form-control col-lg-4">
+                                        <option value="">Select Consigner Name</option>
+                                        <option value="">abc</option>
+                                        <option value="">def</option>
+                                        <option value="">xyz</option>
+                                    </select>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneeAddress">Consognee Address</label>
+                                    <textarea class="form-control border col-lg-4" id="ConsogneeAddress" rows="3"></textarea>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="consignerAddress">Consigner Address</label>
+                                    <textarea class="form-control border col-lg-4" id="consignerAddress" rows="3"></textarea>
+                                </div>
+                                
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneeCity">Consognee<span class="txt-danger">*</span></label>
+                                    <select name="" id="ConsogneeCity" class="form-control col-lg-4">
+                                        <option value="">Select Consognee City</option>
+                                        <option value="">abc</option>
+                                        <option value="">def</option>
+                                        <option value="">xyz</option>
+                                    </select>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="consignorCity">Consigner<span class="txt-danger">*</span></label>
+                                    <select name="" id="consignorCity" class="form-control col-lg-4">
+                                        <option value="">Select Consigner City</option>
+                                        <option value="">abc</option>
+                                        <option value="">def</option>
+                                        <option value="">xyz</option>
+                                    </select>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneePincodenumber">Consognee PinCode<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="number" placeholder="Enter Consognee Pincode Number" id="ConsogneePincodenumber">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsignerPincodenumber">Consigner PinCode<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="number" placeholder="Enter Consigner Pincode Number" id="ConsignerPincodenumber">
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneeCIN">Consognee CIN<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="number" placeholder="Enter Consognee CIN" id="ConsogneeCIN">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsignerCIN">Consigner CIN<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="number" placeholder="Enter Consigner CIN" id="ConsignerCIN">
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneeGST">Consognee GST<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Consognee GST" id="ConsogneeGST">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsignerGST">Consigner GST<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Consigner GST" id="ConsignerGST">
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="InvoiceDateOfInvoice">Date<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="Date" id="InvoiceDateOfInvoice">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="InvoiceNumber">Invoice Number<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="number" placeholder="Enter Invoice Number" id="InvoiceNumber">
                                 </div> 
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtPUCValiditye">PUC Validity<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="Date" id="txtPUCValiditye">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="EngineNumber">Engine Number<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="number" placeholder="Enter Permit Details" id="EngineNumber">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="serialNumber">SR No.<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" id="serialNumber" placeholder="Enter Serial Number">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="value">Value<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="number" placeholder="Enter value" id="value">
+                                </div> 
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="quantity">Quantity<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="number" id="quantity" placeholder="Enter Quantity">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="consignorParameter">Parameter<span class="txt-danger">*</span></label>
+                                    <select name="" id="consignorParameter" class="form-control col-lg-4">
+                                        <option value="">Select Parameter</option>
+                                        <option value="">Ltr</option>
+                                        <option value="">KG</option>
+                                        <option value="">Ton</option>
+                                    </select>
+                                </div> 
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Division">Division<span class="txt-danger">*</span></label>
+                                    <select name="" id="Division" class="form-control col-lg-4">
+                                        <option value="">Select Parameter</option>
+                                        <option value="">Milk Product</option>
+                                        <option value="">Chocklet</option>
+                                        <option value="">xyz</option>
+                                    </select>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Weight">Weight<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="number" id="Weight" placeholder="Enter Weight">
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtRemarks">InsuranceValidity Number</label>
-                                    <input class="form-control col-lg-10 digit" type="number" placeholder="Enter Insurance Validity Number" id="EngineNumber">
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDescription">Is Door Delevory</label>
+                                  <div class="col-lg-10 pt-2">
+                                    <input type="radio" id="yes" name="fav_language" value="yes">
+                                    <label for="yes" class="form-label">Yes</label>
+                                    <input type="radio" id="no" name="fav_language" value="No">
+                                    <label for="no" class="form-label">No</label>
+                                  </div>
                                 </div>
-                                <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtRemarks">Remarks</label>
-                                  <textarea class="form-control border col-lg-10" id="txtRemarks" rows="3"></textarea>
-                                </div>
-                                <div class="btn-showcase text-end">
+                               
+                                <div class="btn-showcase text-center">
                                   <button class="btn btn-primary" type="submit">Save</button>
                                   <button class="btn btn-dark" type="reset">Reset</button>
                                 </div>
@@ -312,7 +376,7 @@
           <div class="container-fluid"> 
             <div class="row">
               <div class="col-md-12 footer-copyright text-center">
-                <p class="mb-0">Developed By <a href="https://theuniqueitsolution.com/" target="_blank" class="text-primary">Unique IT Solution</a></p>
+                <p class="mb-0">Powered By <a href="https://theuniqueitsolution.com/" target="_blank" class="text-primary">Unique IT Solution</a></p>
               </div>
             </div>
           </div>
