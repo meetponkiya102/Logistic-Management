@@ -2697,7 +2697,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	         = (object) in format:
 	         o dx (number) translation by x
 	         o dy (number) translation by y
-	         o scalex (number) scale by x
+	         o sc (number) scale by x
 	         o scaley (number) scale by y
 	         o shear (number) shear
 	         o rotate (number) rotation in deg
@@ -2711,7 +2711,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            // scale and shear
 	            var row = [[this.a, this.c], [this.b, this.d]];
-	            out.scalex = math.sqrt(norm(row[0]));
+	            out.sc = math.sqrt(norm(row[0]));
 	            normalize(row[0]);
 
 	            out.shear = row[0][0] * row[1][0] + row[0][1] * row[1][1];
@@ -2733,8 +2733,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                out.rotate = R.deg(math.asin(sin));
 	            }
 
-	            out.isSimple = !+out.shear.toFixed(9) && (out.scalex.toFixed(9) == out.scaley.toFixed(9) || !out.rotate);
-	            out.isSuperSimple = !+out.shear.toFixed(9) && out.scalex.toFixed(9) == out.scaley.toFixed(9) && !out.rotate;
+	            out.isSimple = !+out.shear.toFixed(9) && (out.sc.toFixed(9) == out.scaley.toFixed(9) || !out.rotate);
+	            out.isSuperSimple = !+out.shear.toFixed(9) && out.sc.toFixed(9) == out.scaley.toFixed(9) && !out.rotate;
 	            out.noRotation = !+out.shear.toFixed(9) && !out.rotate;
 	            return out;
 	        };
@@ -2748,11 +2748,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        matrixproto.toTransformString = function (shorter) {
 	            var s = shorter || this[split]();
 	            if (s.isSimple) {
-	                s.scalex = +s.scalex.toFixed(4);
+	                s.sc = +s.sc.toFixed(4);
 	                s.scaley = +s.scaley.toFixed(4);
 	                s.rotate = +s.rotate.toFixed(4);
 	                return  (s.dx || s.dy ? "t" + [s.dx, s.dy] : E) +
-	                        (s.scalex != 1 || s.scaley != 1 ? "s" + [s.scalex, s.scaley, 0, 0] : E) +
+	                        (s.sc != 1 || s.scaley != 1 ? "s" + [s.sc, s.scaley, 0, 0] : E) +
 	                        (s.rotate ? "r" + [s.rotate, 0, 0] : E);
 	            } else {
 	                return "m" + [this.get(0), this.get(1), this.get(2), this.get(3), this.get(4), this.get(5)];
@@ -7831,7 +7831,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                setCoords(this, 1, 1, dx, dy, 0);
 	            } else {
 	                o.style.filter = E;
-	                setCoords(this, split.scalex, split.scaley, split.dx, split.dy, split.rotate);
+	                setCoords(this, split.sc, split.scaley, split.dx, split.dy, split.rotate);
 	            }
 	        } else {
 	            o.style.filter = E;

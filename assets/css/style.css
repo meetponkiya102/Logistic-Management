@@ -9388,8 +9388,8 @@ textarea {
   padding-left: unset;
 }
 .shopping-wizard .shipping-form .proceed-next {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -webkit-transform: sc(-1);
+          transform: sc(-1);
 }
 .shopping-wizard .shipping-form .payment-info-wrapper .card-wrapper {
   display: -webkit-box;
@@ -20561,8 +20561,8 @@ p.data-attributes svg {
   position: absolute;
   bottom: 0;
   right: 0;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -webkit-transform: sc(-1);
+          transform: sc(-1);
 }
 [dir=rtl] .square-group {
   right: unset;
@@ -20887,8 +20887,8 @@ p.data-attributes svg {
 [dir=rtl] .course-wrapper .course-icon-box .arrow-bg {
   left: unset;
   right: 0;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -webkit-transform: sc(-1);
+          transform: sc(-1);
 }
 @media (max-width: 767px) {
   .course-wrapper .course-icon-box .arrow-bg {
@@ -42706,8 +42706,8 @@ table.table-bordered thead tr th p {
 [dir=rtl] .tagify--select::after {
   right: unset;
   left: 0;
-  -webkit-transform: translate(150%, -50%) scaleX(1.2) rotate(90deg);
-          transform: translate(150%, -50%) scaleX(1.2) rotate(90deg);
+  -webkit-transform: translate(150%, -50%) sc(1.2) rotate(90deg);
+          transform: translate(150%, -50%) sc(1.2) rotate(90deg);
 }
 [dir=rtl] .tagify--select .tagify__tag {
   right: unset;
@@ -45853,12 +45853,12 @@ html[dir=rtl] .revenuegrowth .revenuegrowth-chart::before {
 html[dir=rtl] .img-boostup .img-boostup-img-1 {
   left: unset;
   right: -63px;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -webkit-transform: sc(-1);
+          transform: sc(-1);
 }
 html[dir=rtl] .img-boostup .img-boostup-img-2 {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -webkit-transform: sc(-1);
+          transform: sc(-1);
   left: unset;
   right: -61px;
 }
@@ -45924,8 +45924,8 @@ html[dir=rtl] .important-project .projectlist-card .range_4 .slider-container .s
   left: 0;
 }
 html[dir=rtl] .add-project .categories {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -webkit-transform: sc(-1);
+          transform: sc(-1);
   left: 0;
   right: unset;
 }
@@ -47181,8 +47181,8 @@ html[dir=rtl] .updates-faq {
 html[dir=rtl] .categories {
   right: unset;
   left: 0;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -webkit-transform: sc(-1);
+          transform: sc(-1);
 }
 html[dir=rtl] .categories .learning-header {
   padding-right: 15px;
@@ -48791,12 +48791,12 @@ html[dir=rtl] body.dark-only .page-wrapper .page-body-wrapper .page-body .card:n
     margin-right: 0;
   }
   html[dir=rtl] .product-sidebar {
-    -webkit-transform: translateX(300px) scaleX(1);
-            transform: translateX(300px) scaleX(1);
+    -webkit-transform: translateX(300px) sc(1);
+            transform: translateX(300px) sc(1);
   }
   html[dir=rtl] .product-sidebar.open {
-    -webkit-transform: translateX(0px) scaleX(1);
-            transform: translateX(0px) scaleX(1);
+    -webkit-transform: translateX(0px) sc(1);
+            transform: translateX(0px) sc(1);
   }
   html[dir=rtl] .feature-products .filter-toggle {
     margin-right: 10px;

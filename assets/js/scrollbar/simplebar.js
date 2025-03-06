@@ -4362,8 +4362,8 @@
 	// Weex JS has frozen built-in prototypes, so use try / catch wrapper
 	var SPLIT_WORKS_WITH_OVERWRITTEN_EXEC = !fails(function () {
 	  var re = /(?:)/;
-	  var originalExec = re.exec;
-	  re.exec = function () { return originalExec.apply(this, arguments); };
+	  var originec = re.exec;
+	  re.exec = function () { return originec.apply(this, arguments); };
 	  var result = 'ab'.split(re);
 	  return result.length !== 2 || result[0] !== 'a' || result[1] !== 'b';
 	});

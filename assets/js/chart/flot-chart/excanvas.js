@@ -250,7 +250,7 @@
       o2.font = o1.font;
       o2.textAlign = o1.textAlign;
       o2.textBaseline = o1.textBaseline;
-      o2.arcScaleX_ = o1.arcScaleX_;
+      o2.arcSc_ = o1.arcSc_;
       o2.arcScaleY_ = o1.arcScaleY_;
       o2.lineScale_ = o1.lineScale_;
     }
@@ -610,7 +610,7 @@
       canvasElement.appendChild(overlayEl);
 
       this.element_ = el;
-      this.arcScaleX_ = 1;
+      this.arcSc_ = 1;
       this.arcScaleY_ = 1;
       this.lineScale_ = 1;
     }
@@ -1044,11 +1044,11 @@
                 " ",
                 p.type,
                 " ",
-                mr(p.x - this.arcScaleX_ * p.radius),
+                mr(p.x - this.arcSc_ * p.radius),
                 ",",
                 mr(p.y - this.arcScaleY_ * p.radius),
                 " ",
-                mr(p.x + this.arcScaleX_ * p.radius),
+                mr(p.x + this.arcSc_ * p.radius),
                 ",",
                 mr(p.y + this.arcScaleY_ * p.radius),
                 " ",
@@ -1134,7 +1134,7 @@
 
     function appendFill(ctx, lineStr, min, max) {
       var fillStyle = ctx.fillStyle;
-      var arcScaleX = ctx.arcScaleX_;
+      var arcSc = ctx.arcSc_;
       var arcScaleY = ctx.arcScaleY_;
       var width = max.x - min.x;
       var height = max.y - min.y;
@@ -1149,9 +1149,9 @@
         var expansion = 1;
 
         if (fillStyle.type_ == "gradient") {
-          var x0 = fillStyle.x0_ / arcScaleX;
+          var x0 = fillStyle.x0_ / arcSc;
           var y0 = fillStyle.y0_ / arcScaleY;
-          var x1 = fillStyle.x1_ / arcScaleX;
+          var x1 = fillStyle.x1_ / arcSc;
           var y1 = fillStyle.y1_ / arcScaleY;
           var p0 = getCoords(ctx, x0, y0);
           var p1 = getCoords(ctx, x1, y1);
@@ -1176,7 +1176,7 @@
             y: (p0.y - min.y) / height,
           };
 
-          width /= arcScaleX * Z;
+          width /= arcSc * Z;
           height /= arcScaleY * Z;
           var dimension = m.max(width, height);
           shift = (2 * fillStyle.r0_) / dimension;
@@ -1240,7 +1240,7 @@
           lineStr.push(
             "<g_vml_:fill",
             ' position="',
-            (deltaLeft / width) * arcScaleX * arcScaleX,
+            (deltaLeft / width) * arcSc * arcSc,
             ",",
             (deltaTop / height) * arcScaleY * arcScaleY,
             '"',
@@ -1348,7 +1348,7 @@
     };
 
     contextPrototype.scale = function (aX, aY) {
-      this.arcScaleX_ *= aX;
+      this.arcSc_ *= aX;
       this.arcScaleY_ *= aY;
       var m1 = [
         [aX, 0, 0],

@@ -789,7 +789,7 @@
    */
   function getTransforms(_ref) {
     var rotate = _ref.rotate,
-      scaleX = _ref.scaleX,
+      sc = _ref.sc,
       scaleY = _ref.scaleY,
       translateX = _ref.translateX,
       translateY = _ref.translateY;
@@ -809,8 +809,8 @@
       values.push("rotate(" + rotate + "deg)");
     }
 
-    if (isNumber(scaleX) && scaleX !== 1) {
-      values.push("scaleX(" + scaleX + ")");
+    if (isNumber(sc) && sc !== 1) {
+      values.push("sc(" + sc + ")");
     }
 
     if (isNumber(scaleY) && scaleY !== 1) {
@@ -1010,8 +1010,8 @@
       imageNaturalHeight = _ref6.naturalHeight,
       _ref6$rotate = _ref6.rotate,
       rotate = _ref6$rotate === undefined ? 0 : _ref6$rotate,
-      _ref6$scaleX = _ref6.scaleX,
-      scaleX = _ref6$scaleX === undefined ? 1 : _ref6$scaleX,
+      _ref6$sc = _ref6.sc,
+      sc = _ref6$sc === undefined ? 1 : _ref6$sc,
       _ref6$scaleY = _ref6.scaleY,
       scaleY = _ref6$scaleY === undefined ? 1 : _ref6$scaleY;
     var aspectRatio = _ref7.aspectRatio,
@@ -1091,7 +1091,7 @@
     context.save();
     context.translate(width / 2, height / 2);
     context.rotate((rotate * Math.PI) / 180);
-    context.scale(scaleX, scaleY);
+    context.scale(sc, scaleY);
     context.imageSmoothingEnabled = imageSmoothingEnabled;
     context.imageSmoothingQuality = imageSmoothingQuality;
     context.drawImage.apply(
@@ -1257,13 +1257,13 @@
    */
   function parseOrientation(orientation) {
     var rotate = 0;
-    var scaleX = 1;
+    var sc = 1;
     var scaleY = 1;
 
     switch (orientation) {
       // Flip horizontal
       case 2:
-        scaleX = -1;
+        sc = -1;
         break;
 
       // Rotate left 180°
@@ -1290,7 +1290,7 @@
       // Flip horizontal and rotate right 90°
       case 7:
         rotate = 90;
-        scaleX = -1;
+        sc = -1;
         break;
 
       // Rotate left 90°
@@ -1303,7 +1303,7 @@
 
     return {
       rotate: rotate,
-      scaleX: scaleX,
+      sc: sc,
       scaleY: scaleY,
     };
   }
@@ -1509,7 +1509,7 @@
 
       if (transformed) {
         var _getRotatedSizes = getRotatedSizes({
-            width: imageData.naturalWidth * Math.abs(imageData.scaleX || 1),
+            width: imageData.naturalWidth * Math.abs(imageData.sc || 1),
             height: imageData.naturalHeight * Math.abs(imageData.scaleY || 1),
             degree: imageData.rotate || 0,
           }),
@@ -3102,13 +3102,13 @@
 
     /**
      * Scale the image on the x-axis.
-     * @param {number} scaleX - The scale ratio on the x-axis.
+     * @param {number} sc - The scale ratio on the x-axis.
      * @returns {Cropper} this
      */
-    scaleX: function scaleX(_scaleX) {
+    sc: function sc(_sc) {
       var scaleY = this.imageData.scaleY;
 
-      return this.scale(_scaleX, isNumber(scaleY) ? scaleY : 1);
+      return this.scale(_sc, isNumber(scaleY) ? scaleY : 1);
     },
 
     /**
@@ -3117,32 +3117,32 @@
      * @returns {Cropper} this
      */
     scaleY: function scaleY(_scaleY) {
-      var scaleX = this.imageData.scaleX;
+      var sc = this.imageData.sc;
 
-      return this.scale(isNumber(scaleX) ? scaleX : 1, _scaleY);
+      return this.scale(isNumber(sc) ? sc : 1, _scaleY);
     },
 
     /**
      * Scale the image
-     * @param {number} scaleX - The scale ratio on the x-axis.
-     * @param {number} [scaleY=scaleX] - The scale ratio on the y-axis.
+     * @param {number} sc - The scale ratio on the x-axis.
+     * @param {number} [scaleY=sc] - The scale ratio on the y-axis.
      * @returns {Cropper} this
      */
-    scale: function scale(scaleX) {
+    scale: function scale(sc) {
       var scaleY =
         arguments.length > 1 && arguments[1] !== undefined
           ? arguments[1]
-          : scaleX;
+          : sc;
       var imageData = this.imageData;
 
       var transformed = false;
 
-      scaleX = Number(scaleX);
+      sc = Number(sc);
       scaleY = Number(scaleY);
 
       if (this.ready && !this.disabled && this.options.scalable) {
-        if (isNumber(scaleX)) {
-          imageData.scaleX = scaleX;
+        if (isNumber(sc)) {
+          imageData.sc = sc;
           transformed = true;
         }
 
@@ -3204,7 +3204,7 @@
       }
 
       if (options.scalable) {
-        data.scaleX = imageData.scaleX || 1;
+        data.sc = imageData.sc || 1;
         data.scaleY = imageData.scaleY || 1;
       }
 
@@ -3234,8 +3234,8 @@
         }
 
         if (options.scalable) {
-          if (isNumber(data.scaleX) && data.scaleX !== imageData.scaleX) {
-            imageData.scaleX = data.scaleX;
+          if (isNumber(data.sc) && data.sc !== imageData.sc) {
+            imageData.sc = data.sc;
             transformed = true;
           }
 
@@ -3778,7 +3778,7 @@
 
             var orientation = getOrientation(arrayBuffer);
             var rotate = 0;
-            var scaleX = 1;
+            var sc = 1;
             var scaleY = 1;
 
             if (orientation > 1) {
@@ -3787,7 +3787,7 @@
               var _parseOrientation = parseOrientation(orientation);
 
               rotate = _parseOrientation.rotate;
-              scaleX = _parseOrientation.scaleX;
+              sc = _parseOrientation.sc;
               scaleY = _parseOrientation.scaleY;
             }
 
@@ -3796,7 +3796,7 @@
             }
 
             if (options.scalable) {
-              imageData.scaleX = scaleX;
+              imageData.sc = sc;
               imageData.scaleY = scaleY;
             }
 

@@ -734,7 +734,7 @@
 
     var defaults = {
         opacity: 1,
-        scaleX: 1,
+        sc: 1,
         scaleY: 1,
         translateX: 0,
         translateY: 0,
@@ -766,7 +766,7 @@
         };
 
         var getScale = function getScale() {
-            return [viewProps['scaleX'] || 0, viewProps['scaleY'] || 0];
+            return [viewProps['sc'] || 0, viewProps['scaleY'] || 0];
         };
         var getRect = function getRect() {
             return view.rect
@@ -824,7 +824,7 @@
             perspective = _ref2.perspective,
             translateX = _ref2.translateX,
             translateY = _ref2.translateY,
-            scaleX = _ref2.scaleX,
+            sc = _ref2.sc,
             scaleY = _ref2.scaleY,
             rotateX = _ref2.rotateX,
             rotateY = _ref2.rotateY,
@@ -855,10 +855,10 @@
         }
 
         // 2. scale
-        if (isDefined(scaleX) || isDefined(scaleY)) {
+        if (isDefined(sc) || isDefined(scaleY)) {
             transforms +=
                 'scale3d(' +
-                (isDefined(scaleX) ? scaleX : 1) +
+                (isDefined(sc) ? sc : 1) +
                 ', ' +
                 (isDefined(scaleY) ? scaleY : 1) +
                 ', 1) ';
@@ -7593,9 +7593,9 @@
         name: 'file-action-button',
         mixins: {
             apis: ['label'],
-            styles: ['translateX', 'translateY', 'scaleX', 'scaleY', 'opacity'],
+            styles: ['translateX', 'translateY', 'sc', 'scaleY', 'opacity'],
             animations: {
-                scaleX: 'spring',
+                sc: 'spring',
                 scaleY: 'spring',
                 translateX: 'spring',
                 translateY: 'spring',
@@ -7947,7 +7947,7 @@
         buttonRevertItemProcessing: { opacity: 0 },
         loadProgressIndicator: { opacity: 0, align: getLoadIndicatorAlignment },
         processProgressIndicator: { opacity: 0, align: getProcessIndicatorAlignment },
-        processingCompleteIndicator: { opacity: 0, scaleX: 0.75, scaleY: 0.75 },
+        processingCompleteIndicator: { opacity: 0, sc: 0.75, scaleY: 0.75 },
         info: { translateX: 0, translateY: 0, opacity: 0 },
         status: { translateX: 0, translateY: 0, opacity: 0 },
     };
@@ -8046,9 +8046,9 @@
         name: 'processing-complete-indicator',
         ignoreRect: true,
         mixins: {
-            styles: ['scaleX', 'scaleY', 'opacity'],
+            styles: ['sc', 'scaleY', 'opacity'],
             animations: {
-                scaleX: 'spring',
+                sc: 'spring',
                 scaleY: 'spring',
                 opacity: { type: 'tween', duration: 250 },
             },
@@ -8126,7 +8126,7 @@
             map.info.translateX = calculateFileHorizontalCenterOffset;
             map.info.translateY = calculateFileVerticalCenterOffset;
             map.status.translateY = calculateFileVerticalCenterOffset;
-            map.processingCompleteIndicator = { opacity: 1, scaleX: 1, scaleY: 1 };
+            map.processingCompleteIndicator = { opacity: 1, sc: 1, scaleY: 1 };
         }
 
         // should align center
@@ -8148,7 +8148,7 @@
             var _map = StyleMap['DID_COMPLETE_ITEM_PROCESSING'];
             _map.info.translateX = calculateFileInfoOffset;
             _map.status.translateY = calculateFileVerticalCenterOffset;
-            _map.processingCompleteIndicator = { opacity: 1, scaleX: 1, scaleY: 1 };
+            _map.processingCompleteIndicator = { opacity: 1, sc: 1, scaleY: 1 };
         }
 
         // show/hide RemoveItem button
@@ -8681,7 +8681,7 @@
                 shouldOptimize = _ref6.shouldOptimize;
 
             if (root.element.dataset.dragState === 'drop') {
-                if (root.scaleX <= 1) {
+                if (root.sc <= 1) {
                     root.element.dataset.dragState = 'idle';
                 }
             }
@@ -8748,10 +8748,10 @@
                 'dragOrigin',
                 'dragOffset',
             ],
-            styles: ['translateX', 'translateY', 'scaleX', 'scaleY', 'opacity', 'height'],
+            styles: ['translateX', 'translateY', 'sc', 'scaleY', 'opacity', 'height'],
 
             animations: {
-                scaleX: ITEM_SCALE_SPRING,
+                sc: ITEM_SCALE_SPRING,
                 scaleY: ITEM_SCALE_SPRING,
                 translateX: ITEM_TRANSLATE_SPRING,
                 translateY: ITEM_TRANSLATE_SPRING,
@@ -8911,7 +8911,7 @@
             item.translateY = null;
             item.translateX = item.dragOrigin.x + item.dragOffset.x;
             item.translateY = item.dragOrigin.y + item.dragOffset.y;
-            item.scaleX = 1.025;
+            item.sc = 1.025;
             item.scaleY = 1.025;
         } else {
             item.translateX = x;
@@ -8924,7 +8924,7 @@
                 }
 
                 // make sure is default scale every frame
-                item.scaleX = 1;
+                item.sc = 1;
                 item.scaleY = 1;
                 item.opacity = 1;
             }
@@ -8944,7 +8944,7 @@
             item.translateY = null;
             item.translateY = y - vy * 10;
 
-            item.scaleX = 0.8;
+            item.sc = 0.8;
             item.scaleY = 0.8;
         } else if (item.interactionMethod === InteractionMethod.BROWSE) {
             item.translateY = null;
@@ -8977,7 +8977,7 @@
         }
 
         // animate view out of view
-        view.scaleX = 0.9;
+        view.sc = 0.9;
         view.scaleY = 0.9;
         view.opacity = 0;
 
@@ -9677,9 +9677,9 @@
         name: 'drip-blob',
         ignoreRect: true,
         mixins: {
-            styles: ['translateX', 'translateY', 'scaleX', 'scaleY', 'opacity'],
+            styles: ['translateX', 'translateY', 'sc', 'scaleY', 'opacity'],
             animations: {
-                scaleX: 'spring',
+                sc: 'spring',
                 scaleY: 'spring',
                 translateX: 'spring',
                 translateY: 'spring',
@@ -9696,7 +9696,7 @@
         root.ref.blob = root.appendChildView(
             root.createChildView(blob, {
                 opacity: 0,
-                scaleX: 2.5,
+                sc: 2.5,
                 scaleY: 2.5,
                 translateX: centerX,
                 translateY: centerY,
@@ -9714,7 +9714,7 @@
 
         root.ref.blob.translateX = action.position.scopeLeft;
         root.ref.blob.translateY = action.position.scopeTop;
-        root.ref.blob.scaleX = 1;
+        root.ref.blob.sc = 1;
         root.ref.blob.scaleY = 1;
         root.ref.blob.opacity = 1;
     };
@@ -9732,7 +9732,7 @@
         if (!root.ref.blob) {
             return;
         }
-        root.ref.blob.scaleX = 2.5;
+        root.ref.blob.sc = 2.5;
         root.ref.blob.scaleY = 2.5;
         root.ref.blob.opacity = 0;
     };

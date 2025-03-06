@@ -1903,8 +1903,8 @@
     display: none;
   }
   .product-sidebar {
-    -webkit-transform: translateX(-300px) scaleX(0);
-            transform: translateX(-300px) scaleX(0);
+    -webkit-transform: translateX(-300px) sc(0);
+            transform: translateX(-300px) sc(0);
     opacity: 0;
     visibility: hidden;
     -webkit-transition: 0.3s;
@@ -1915,8 +1915,8 @@
     width: 300px;
   }
   .product-sidebar.open {
-    -webkit-transform: translateX(0px) scaleX(1);
-            transform: translateX(0px) scaleX(1);
+    -webkit-transform: translateX(0px) sc(1);
+            transform: translateX(0px) sc(1);
     -webkit-box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, 0.05);
             box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, 0.05);
     visibility: visible;

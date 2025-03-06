@@ -14,7 +14,7 @@
     var $dataHeight = $("#dataHeight");
     var $dataWidth = $("#dataWidth");
     var $dataRotate = $("#dataRotate");
-    var $dataScaleX = $("#dataScaleX");
+    var $dataSc = $("#dataSc");
     var $dataScaleY = $("#dataScaleY");
     var options = {
       aspectRatio: 16 / 9,
@@ -25,7 +25,7 @@
         $dataHeight.val(Math.round(e.detail.height));
         $dataWidth.val(Math.round(e.detail.width));
         $dataRotate.val(e.detail.rotate);
-        $dataScaleX.val(e.detail.scaleX);
+        $dataSc.val(e.detail.sc);
         $dataScaleY.val(e.detail.scaleY);
       },
     };
@@ -113,7 +113,7 @@
               $image.cropper("crop");
             }
             break;
-          case "scaleX":
+          case "sc":
           case "scaleY":
             $(this).data("option", -data.option);
             break;

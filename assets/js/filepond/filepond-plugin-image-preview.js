@@ -2381,7 +2381,7 @@
     return _.utils.createView({
       name: 'image-bitmap',
       ignoreRect: true,
-      mixins: { styles: ['scaleX', 'scaleY'] },
+      mixins: { styles: ['sc', 'scaleY'] },
       create: function create(_ref) {
         var root = _ref.root,
           props = _ref.props;
@@ -2404,7 +2404,7 @@
           'originY',
           'translateX',
           'translateY',
-          'scaleX',
+          'sc',
           'scaleY',
           'rotateZ'
         ],
@@ -2412,7 +2412,7 @@
         animations: {
           originX: IMAGE_SCALE_SPRING_PROPS,
           originY: IMAGE_SCALE_SPRING_PROPS,
-          scaleX: IMAGE_SCALE_SPRING_PROPS,
+          sc: IMAGE_SCALE_SPRING_PROPS,
           scaleY: IMAGE_SCALE_SPRING_PROPS,
           translateX: IMAGE_SCALE_SPRING_PROPS,
           translateY: IMAGE_SCALE_SPRING_PROPS,
@@ -2434,7 +2434,7 @@
           props = _ref3.props;
         var flip = props.crop.flip;
         var bitmap = root.ref.bitmap;
-        bitmap.scaleX = flip.horizontal ? -1 : 1;
+        bitmap.sc = flip.horizontal ? -1 : 1;
         bitmap.scaleY = flip.vertical ? -1 : 1;
       }
     });
@@ -2587,7 +2587,7 @@
           imageView.translateX = null;
           imageView.translateY = null;
           imageView.rotateZ = null;
-          imageView.scaleX = null;
+          imageView.sc = null;
           imageView.scaleY = null;
           return;
         }
@@ -2597,7 +2597,7 @@
         imageView.translateX = translation.x;
         imageView.translateY = translation.y;
         imageView.rotateZ = rotation;
-        imageView.scaleX = scale;
+        imageView.sc = scale;
         imageView.scaleY = scale;
       }
     });
@@ -2611,10 +2611,10 @@
       mixins: {
         apis: ['image', 'crop', 'markup', 'resize', 'dirty', 'background'],
 
-        styles: ['translateY', 'scaleX', 'scaleY', 'opacity'],
+        styles: ['translateY', 'sc', 'scaleY', 'opacity'],
 
         animations: {
-          scaleX: IMAGE_SCALE_SPRING_PROPS,
+          sc: IMAGE_SCALE_SPRING_PROPS,
           scaleY: IMAGE_SCALE_SPRING_PROPS,
           translateY: IMAGE_SCALE_SPRING_PROPS,
           opacity: { type: 'tween', duration: 400 }
@@ -3100,7 +3100,7 @@
           dirty: dirty,
           background: background,
           opacity: 0,
-          scaleX: 1.15,
+          sc: 1.15,
           scaleY: 1.15,
           translateY: 15
         }),
@@ -3112,7 +3112,7 @@
 
       // reveal the preview image
       imageView.opacity = 1;
-      imageView.scaleX = 1;
+      imageView.sc = 1;
       imageView.scaleY = 1;
       imageView.translateY = 0;
 
@@ -3374,7 +3374,7 @@
       // get last added image
       var image = root.ref.images[root.ref.images.length - 1];
       image.translateY = 0;
-      image.scaleX = 1.0;
+      image.sc = 1.0;
       image.scaleY = 1.0;
       image.opacity = 1;
     };
