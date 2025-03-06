@@ -140,10 +140,10 @@
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">Lori Report</span></a>
+                    <span class="lan-9">Lorry Report</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LoriReport</a></li>
-                    <li><a href="lori-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LoriReport List</a></li>
+                    <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LorryReport</a></li>
+                    <li><a href="Lorry-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LorryReport List</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -192,10 +192,10 @@
                 
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">Depo</span></a>
+                    <span class="lan-9">Depot</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="add-warehouse.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Depo</a></li>
-                    <li><a href="warehouse-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Depo List</a></li>
+                    <li><a href="add-Depot.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Depot</a></li>
+                    <li><a href="Depot-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Depot List</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -282,43 +282,64 @@
                               <form class="needs-validation custom-input" novalidate="">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="row mb-3">
-                                            <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LRNumber">LRNumber<span class="txt-danger">*</span></label>
-                                            <input class="form-control col-lg-10" type="number" placeholder="Enter LRNumber" id="LRNumber">
-                                        </div>
-                                        <div class="row mb-3">
-                                            <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="TruckNumber">Truck Number<span class="txt-danger">*</span></label>
-                                            <input class="form-control col-lg-4" type="number" placeholder="Enter Truck Number" id="TruckNumber">
-                                            <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDriverName">DriverName</label>
-                                            <input class="form-control col-lg-4" type="text" id="txtDriverName">
-                                        </div>
-                                        <div class="row mb-3">
-                                            <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LicenceNumber">Licence Number<span class="txt-danger">*</span></label>
-                                            <input class="form-control col-lg-4" type="number" placeholder="Enter Licence Number" id="LicenceNumber">
-                                        </div>
+                                        <div class="card-body">
+                                          <div class="row mb-3">
+                                              <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LRNumber">LR Number<span class="txt-danger">*</span></label>
+                                              <input class="form-control col-lg-10" type="number" placeholder="Enter LR Number" id="LRNumber">
+                                          </div>
+                                          <div class="row mb-3">
+                                              <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="VehicleName">Vehicle Name<span class="txt-danger">*</span></label>
+                                              <select class="form-control col-lg-4" id="VehicleName">
+                                                  <option value="">Select Vehicle</option>
+                                                  <option value="Truck1">Truck 1</option>
+                                                  <option value="Truck2">Truck 2</option>
+                                                  <option value="Truck3">Truck 3</option>
+                                                  <option value="Van1">Van 1</option>
+                                                  <option value="Van2">Van 2</option>
+                                              </select>
+                                              
+                                              <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="DriverName">Driver Name</label>
+                                              <select class="form-control col-lg-4" id="DriverName">
+                                                  <option value="">Select Driver</option>
+                                                  <option value="Driver1">Aarav Sharma</option>
+                                                  <option value="Driver2">Ishaan Patel</option>
+                                                  <option value="Driver3">Vivaan Reddy</option>
+                                                  <option value="Driver4">Ravi Kumar</option>
+                                                  <option value="Driver5">Priya Singh</option>
+                                              </select>
+                                          </div>
+                                          <div class="row mb-3">
+                                              <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LicenceNumber">Licence Number<span class="txt-danger">*</span></label>
+                                              <input class="form-control col-lg-4" type="number" placeholder="Enter Licence Number" id="LicenceNumber" readonly value="8520963">
+                                          </div>
+                                      </div>                                      
                                     </div>
                                 </div>
                                 <div class="card">
-                                    <div class="card-header">
-                                        <h4>Delivery Details</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="row mb-3">
-                                            <label class="form-label col-lg-3 col-md-4 col-sm-12 text-start my-2" for="transporter">Delivery To Transporter<span class="txt-danger">*</span></label>
-                                            <input class="form-control col-lg-9" type="text" placeholder="Enter transporter" id="transporter">
-                                        </div>
-                                        <div class="row mb-3">
-                                            <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="TruckNumber">Transporter Number<span class="txt-danger">*</span></label>
-                                            <input class="form-control col-lg-4" type="number" placeholder="Enter Truck Number" id="TruckNumber">
-                                            <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDiscripition">Discripition</label>
-                                            <input class="form-control col-lg-4" type="text" id="txtDiscripition">
-                                        </div>
-                                        <div class="row mb-3">
-                                            <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LRDate">LRDate<span class="txt-danger">*</span></label>
-                                            <input class="form-control col-lg-4" type="date" placeholder="Enter LR Date" id="LRDate">
-                                        </div>
-                                    </div>
-                                </div>
+                                  <div class="card-header">
+                                      <h4>Delivery Details</h4>
+                                  </div>
+                                  <div class="card-body">
+                                      <div class="row mb-3">
+                                          <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="transporter">Transporter<span class="txt-danger">*</span></label>
+                                          <select class="form-control col-lg-10" id="transporter">
+                                              <option value="">Select Transporter</option>
+                                              <option value="ABC Logistics">ABC Logistics</option>
+                                              <option value="XYZ Transporters">XYZ Transporters</option>
+                                              <option value="LMN Movers">LMN Movers</option>
+                                          </select>
+                                      </div>
+                                      <div class="row mb-3">
+                                          <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDiscripition">Description</label>
+                                          <textarea class="form-control col-lg-9" id="txtDiscripition" rows="4" placeholder="Enter Description"></textarea>
+                                      </div>
+                                      <div class="row mb-3">
+                                          <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LRDate">LR Date<span class="txt-danger">*</span></label>
+                                          <input class="form-control col-lg-4" type="date" id="LRDate">
+                                      </div>
+                                  </div>
+                              </div>
+                              
                                 <div class="card">
                                   <div class="card-header">
                                       <h4>Invoice List</h4>

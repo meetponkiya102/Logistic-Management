@@ -1200,7 +1200,7 @@
 	  parseInt: _parseInt
 	});
 
-	// `String.prototype.{ codePointAt, at }` methods implementation
+	// `String.prototype.{ coDepotintAt, at }` methods implementation
 	var createMethod$3 = function (CONVERT_TO_STRING) {
 	  return function ($this, pos) {
 	    var S = String(requireObjectCoercible($this));
@@ -1217,8 +1217,8 @@
 	};
 
 	var stringMultibyte = {
-	  // `String.prototype.codePointAt` method
-	  // https://tc39.github.io/ecma262/#sec-string.prototype.codepointat
+	  // `String.prototype.coDepotintAt` method
+	  // https://tc39.github.io/ecma262/#sec-string.prototype.coDepotintat
 	  codeAt: createMethod$3(false),
 	  // `String.prototype.at` method
 	  // https://github.com/mathiasbynens/String.prototype.at

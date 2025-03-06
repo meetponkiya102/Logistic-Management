@@ -21,7 +21,7 @@
     "Colorado",
     "Connecticut",
     "Delaware",
-    "Florida",
+    "FLorryda",
     "Georgia",
     "Hawaii",
     "Idaho",

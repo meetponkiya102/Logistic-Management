@@ -141,10 +141,10 @@
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">Lori Report</span></a>
+                    <span class="lan-9">Lorry Report</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LoriReport</a></li>
-                    <li><a href="lori-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LoriReport List</a></li>
+                    <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LorryReport</a></li>
+                    <li><a href="Lorry-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LorryReport List</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -193,10 +193,10 @@
                 
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">Depo</span></a>
+                    <span class="lan-9">Depot</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="add-warehouse.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Depo</a></li>
-                    <li><a href="warehouse-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Depo List</a></li>
+                    <li><a href="add-Depot.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Depot</a></li>
+                    <li><a href="Depot-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Depot List</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -272,43 +272,62 @@
           <!-- Container-fluid starts-->
           <div class="container-fluid">
             <div class="row">
-                <!--  er Button Start -->
-                 <div class="col-lg-12 d-flex justify-content-start ms-md-auto mb-3">
-                    <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="tooltip" title="btn btn-success btn-lg" id="filter-button">
-                      <div class="icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="filter" >
-                          <polygon fill="none" stroke="white" stroke-miterlimit="10" stroke-width="4" points="2 6 2 10 26 34 26 58 38 58 38 34 62 10 62 6 2 6"></polygon>
-                        </svg>
-                      </div>
-                      <div class="text-white" id="text"><span>Filter</span></div>
-                    </button>
+              <!-- Filter Button Start -->
+              <div class="col-lg-12 d-flex justify-content-start ms-md-auto mb-3">
+                <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="tooltip" title="btn btn-success btn-lg" id="filter-button">
+                  <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="filter">
+                      <polygon fill="none" stroke="white" stroke-miterlimit="10" stroke-width="4" points="2 6 2 10 26 34 26 58 38 58 38 34 62 10 62 6 2 6"></polygon>
+                    </svg>
                   </div>
-                 <!-- Filter Button End -->
+                  <div class="text-white" id="text"><span>Filter</span></div>
+                </button>
               </div>
-              <div class="row" id="filter-form">
-                <!-- Filter Form Start -->
-                <div class="col-sm-12">
-                  <div class="card height-equal">
-                    <div class="card-body basic-wizard important-validation">
-                      <div id="msform">
-                        <form class="stepper-one row needs-validation custom-input" novalidate="">
-                          <div class="col-sm-6">
-                            <label class="form-label" for="ConsigneeName">Consignee Name</label>
-                            <input class="form-control w-100 rounded border" type="text" placeholder="Enter Consignee Name" id="ConsigneeName">
-                          </div>
-                          <div class="col-sm-6">
-                            <label class="form-label" for="ConsigneeTown">Consigner Name</label>
-                            <input class="form-control w-100 rounded border" type="text" placeholder="Enter Consigner Name" id="ConsigneeTown">
-                          </div>
-                          <div class="wizard-footer mt-2 d-flex gap-2 justify-content-end">
-                            <button class="btn btn-primary" type="submit">Search</button>
-                            <button class="btn btn-dark" type="reset">Reset</button>
-                          </div>
-                        </form>
-                      </div>
+              <!-- Filter Button End -->
+            </div>
+            
+            <div class="row" id="filter-form">
+              <!-- Filter Form Start -->
+              <div class="col-sm-12">
+                <div class="card height-equal">
+                  <div class="card-body basic-wizard important-validation">
+                    <div id="msform">
+                      <form class="stepper-one row needs-validation custom-input" novalidate="">
+                        <!-- Consignee Name Dropdown -->
+                        <div class="col-sm-6">
+                          <label class="form-label" for="ConsigneeName">Consignee Name</label>
+                          <select class="form-control w-100 rounded border" id="ConsigneeName">
+                            <option value="">Select Consignee Name</option>
+                            <option value="1">Brijesh</option>
+                            <option value="2">Ravi</option>
+                            <option value="3">rahul</option>
+                            <!-- Add more options here as needed -->
+                          </select>
+                        </div>
+                        
+                        <!-- Consigner Name Dropdown -->
+                        <div class="col-sm-6">
+                          <label class="form-label" for="ConsigneeTown">Consigner Name</label>
+                          <select class="form-control w-100 rounded border" id="ConsigneeTown">
+                            <option value="">Select Consigner Name</option>
+                            <option value="1">Brijesh</option>
+                            <option value="2">Ravi</option>
+                            <option value="3">rahul</option>
+                            <!-- Add more options here as needed -->
+                          </select>
+                        </div>
+                        
+                        <!-- Footer with buttons -->
+                        <div class="wizard-footer mt-2 d-flex gap-2 justify-content-end">
+                          <button class="btn btn-primary" type="submit">Search</button>
+                          <button class="btn btn-dark" type="reset">Reset</button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
+              </div>
+            
                 <!-- Filter Form end -->
               </div>
            <div class="row">

@@ -140,10 +140,10 @@
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">Lori Report</span></a>
+                    <span class="lan-9">Lorry Report</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LoriReport</a></li>
-                    <li><a href="lori-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LoriReport List</a></li>
+                    <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LorryReport</a></li>
+                    <li><a href="Lorry-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LorryReport List</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -192,10 +192,10 @@
                 
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">Depo</span></a>
+                    <span class="lan-9">Depot</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="add-warehouse.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Depo</a></li>
-                    <li><a href="warehouse-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Depo List</a></li>
+                    <li><a href="add-Depot.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Depot</a></li>
+                    <li><a href="Depot-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Depot List</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -282,71 +282,72 @@
                             <div class="tab-pane fade show active px-4" id="wizard-contact" role="tabpanel" aria-labelledby="wizard-contact-tab">
                               <form class="needs-validation custom-input" novalidate="">
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Dispatch Challan Number<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-10" type="text" placeholder="Enter Dispatch Challan Number" id="txtOwnerName">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDispatchChallanNumber">Dispatch Challan Number<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-10" type="text" placeholder="Enter Dispatch Challan Number" id="txtDispatchChallanNumber">
                                 </div> 
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Truck Number<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Truck Number" id="txtOwnerName">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtPermitDetails">Consigner Name<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Consigner Name" id="txtPermitDetails">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtTruckNumber">Truck Number<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Truck Number" id="txtTruckNumber" value="MH01AB1234" disabled>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtConsignerName">Consigner Name<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Consigner Name" id="txtConsignerName" value="Suresh Kumar" disabled>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Driver Name<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Driver Name" id="txtOwnerName">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtPermitDetails">Consignee Name<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Consignee Name" id="txtPermitDetails">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDriverName">Driver Name<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Driver Name" id="txtDriverName" value="Ravi Singh" disabled>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtConsigneeName">Consignee Name<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Consignee Name" id="txtConsigneeName" value="Ravi Kumar" disabled>
                                 </div> 
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Leicence Number<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Leicence Number" id="txtOwnerName">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtPermitDetails">Location At consignee<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Location" id="txtPermitDetails">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtLicenceNumber">Licence Number<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Licence Number" id="txtLicenceNumber" value="DL01ABC1234" disabled>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtConsigneeLocation">Location At Consignee<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Location" id="txtConsigneeLocation" value="Mumbai, Maharashtra" disabled>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="VehicalType">Transporte Type<span class="txt-danger">*</span></label>
+                                    <!-- <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="VehicalType">Transporter Type<span class="txt-danger">*</span></label>
                                     <select name="" id="VehicalType" class="form-control col-lg-4" onchange="toggleCompanyField()">
-                                        <option value="">Select Transporte Type</option>
+                                        <option value="">Select Transporter Type</option>
                                         <option value="own">Own</option>
                                         <option value="transporter">Transporter</option>
-                                    </select>
+                                    </select> -->
                                     <div id="companyNameField" style="display: none; margin-left: 240px;" class="mt-2 mb-2">
-                                      <input class="form-control" type="text" id="CompanyName" value="ABC Logistics Pvt. Ltd." readonly>
+                                        <input class="form-control" type="text" id="CompanyName" value="ABC Logistics Pvt. Ltd." readonly>
                                     </div>
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Consignee Pincode<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Consignee Pincode" id="txtOwnerName">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtConsigneePincode">Consignee Pincode<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Consignee Pincode" id="txtConsigneePincode" value="400001" disabled>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Labour Name<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Labour Name" id="txtOwnerName">
-                                    <lable class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Date">Vehicle Reporting At</lable>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtLabourName">Labour Name<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Labour Name" id="txtLabourName" value="Mahesh Yadav" disabled>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Date">Vehicle Reporting At</label>
                                     <input class="form-control col-lg-4 date-input" id="date-input" type="date">
                                 </div>
                                 <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2">Activity</label>
-                                  <div class="col-lg-10">
-                                      <div class="row my-2">
-                                          <div class="col-md-3">
-                                              <div class="form-check">
-                                                  <input class="form-input" id="flexRadioDefault1" type="radio" name="flexRadioDefault">
-                                                  <label class="form-label" for="flexRadioDefault1">Loading</label>
-                                              </div>
-                                          </div>
-                                          <div class="col-md-3">
-                                              <div class="form-check">
-                                                  <input class="form-input" id="flexRadioDefault2" type="radio" name="flexRadioDefault" checked>
-                                                  <label class="form-label" for="flexRadioDefault2">Shorting</label>
-                                              </div>
-                                          </div>
-                                          <div class="col-md-3">
-                                              <div class="form-check">
-                                                  <input class="form-input" id="flexRadioDefault2" type="radio" name="flexRadioDefault" checked>
-                                                  <label class="form-label" for="flexRadioDefault2">UnLoading</label>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2">Activity</label>
+                                    <div class="col-lg-10">
+                                        <div class="row my-2">
+                                            <div class="col-md-3">
+                                                <div class="form-check">
+                                                    <input class="form-input" id="flexRadioDefault1" type="radio" name="flexRadioDefault">
+                                                    <label class="form-label" for="flexRadioDefault1">Loading</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-check">
+                                                    <input class="form-input" id="flexRadioDefault2" type="radio" name="flexRadioDefault" checked>
+                                                    <label class="form-label" for="flexRadioDefault2">Shorting</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-check">
+                                                    <input class="form-input" id="flexRadioDefault3" type="radio" name="flexRadioDefault">
+                                                    <label class="form-label" for="flexRadioDefault3">Unloading</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
                                 <div class="row mb-3">
                                   <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtRemarks">Description</label>
                                   <textarea class="form-control border col-lg-10" id="txtRemarks" rows="3"></textarea>

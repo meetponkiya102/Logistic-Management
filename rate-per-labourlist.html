@@ -144,10 +144,10 @@
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">Lori Report</span></a>
+                    <span class="lan-9">Lorry Report</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LoriReport</a></li>
-                    <li><a href="lori-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LoriReport List</a></li>
+                    <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LorryReport</a></li>
+                    <li><a href="Lorry-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LorryReport List</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -196,10 +196,10 @@
                 
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">Depo</span></a>
+                    <span class="lan-9">Depot</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="add-warehouse.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Depo</a></li>
-                    <li><a href="warehouse-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Depo List</a></li>
+                    <li><a href="add-Depot.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Depot</a></li>
+                    <li><a href="Depot-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Depot List</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -296,27 +296,36 @@
                     <div id="msform">
                       <form class="stepper-one row needs-validation custom-input" novalidate="">
                         <div class="col-sm-4">
-                          <label class="form-label" for="ConsignerName">Labour Name</label>
-                          <input class="form-control w-100 rounded border" type="text" placeholder="Enter Labour Name" id="ConsignerName">
+                          <label class="form-label" for="LabourName">Labour Name</label>
+                          <select class="form-control w-100 rounded border" id="LabourName">
+                            <option value="">Select Labour</option>
+                            <option value="Labour1">Aarav Sharma</option>
+                            <option value="Labour2">Ishaan Patel</option>
+                            <option value="Labour3">Vivaan Reddy</option>
+                            <option value="Labour4">Aditi Gupta</option>
+                            <option value="Labour5">Priya Singh</option>
+                           
+                          </select>
                         </div>
                         <div class="col-sm-4">
-                          <label class="form-label" for="ConsignerTown">Labour Rate</label>
-                          <input class="form-control w-100 rounded border" type="text" placeholder="Enter Labour Rate" id="ConsignerTown">
+                          <label class="form-label" for="LabourRate">Labour Rate</label>
+                          <input class="form-control w-100 rounded border" type="text" placeholder="Enter Labour Rate" id="LabourRate">
                         </div>
                         <div class="col-sm-4">
-                          <label class="form-label" for="ConsignerTown">Labour Activity</label>
-                                    <select name="" id="VehicalType" class="form-control w-100 ">
-                                        <option value="">Select Activity</option>
-                                        <option value="">Loading</option>
-                                        <option value="">Shorting</option>
-                                        <option value="">UnLoading</option>
-                                    </select>
+                          <label class="form-label" for="LabourActivity">Labour Activity</label>
+                          <select name="" id="LabourActivity" class="form-control w-100">
+                            <option value="">Select Activity</option>
+                            <option value="Loading">Loading</option>
+                            <option value="Shorting">Shorting</option>
+                            <option value="UnLoading">UnLoading</option>
+                          </select>
                         </div>
                         <div class="wizard-footer mt-2 d-flex gap-2 justify-content-end">
                           <button class="btn btn-primary" type="submit">Search</button>
                           <button class="btn btn-dark" type="reset">Reset</button>
                         </div>
                       </form>
+                      
                     </div>
                   </div>
                 </div>

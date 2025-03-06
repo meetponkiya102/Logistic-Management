@@ -141,10 +141,10 @@
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">Lori Report</span></a>
+                    <span class="lan-9">Lorry Report</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LoriReport</a></li>
-                    <li><a href="lori-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LoriReport List</a></li>
+                    <li><a href="create-lr.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Create LorryReport</a></li>
+                    <li><a href="Lorry-report-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> LorryReport List</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -193,10 +193,10 @@
                 
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
-                    <span class="lan-9">Depo</span></a>
+                    <span class="lan-9">Depot</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="add-warehouse.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Depo</a></li>
-                    <li><a href="warehouse-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Depo List</a></li>
+                    <li><a href="add-Depot.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Depot</a></li>
+                    <li><a href="Depot-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Depot List</a></li>
                   </ul>
                 </li>
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -293,18 +293,25 @@
                       <div id="msform">
                         <form class="stepper-one row needs-validation custom-input" novalidate="">
                           <div class="col-sm-6">
-                            <label class="form-label" for="ConsigneeName">Driver Name</label>
-                            <input class="form-control w-100 rounded border" type="text" placeholder="Enter Driver Name" id="ConsigneeName">
+                            <label class="form-label" for="DriverName">Driver Name</label>
+                            <select class="form-control w-100 rounded border" id="DriverName">
+                              <option value="">Select Driver Name</option>
+                              <option value="Driver1">John Doe</option>
+                              <option value="Driver2">Rajesh Kumar</option>
+                              <option value="Driver3">Anil Sharma</option>
+                              <option value="Driver4">Suresh Patel</option>
+                            </select>
                           </div>
                           <div class="col-sm-6">
-                            <label class="form-label" for="ConsigneeTown">Liecence No.</label>
-                            <input class="form-control w-100 rounded border" type="text" placeholder="Enter Liecence Number" id="ConsigneeTown">
+                            <label class="form-label" for="LicenceNo">Licence No.</label>
+                            <input class="form-control w-100 rounded border" type="text" placeholder="Enter Licence Number" id="LicenceNo">
                           </div>
                           <div class="wizard-footer mt-2 d-flex gap-2 justify-content-end">
                             <button class="btn btn-primary" type="submit">Search</button>
                             <button class="btn btn-dark" type="reset">Reset</button>
                           </div>
                         </form>
+                        
                       </div>
                     </div>
                   </div>

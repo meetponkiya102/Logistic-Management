@@ -370,7 +370,7 @@
         "$725,000",
       ],
       [
-        "Gloria Little",
+        "GLorrya Little",
         "Systems Administrator",
         "New York",
         "1721",

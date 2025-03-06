@@ -1043,14 +1043,14 @@ Licensed under the MIT license.
 
             // Finalize the series options, filling in their colors
 
-            var colori = 0, s;
+            var coLorry = 0, s;
             for (i = 0; i < series.length; ++i) {
                 s = series[i];
 
                 // assign colors
                 if (s.color == null) {
-                    s.color = colors[colori].toString();
-                    ++colori;
+                    s.color = colors[coLorry].toString();
+                    ++coLorry;
                 }
                 else if (typeof s.color == "number")
                     s.color = colors[s.color].toString();

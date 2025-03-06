@@ -4276,13 +4276,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    animationElements.splice(l--, 1);
 	                    if (e.repeat > 1 && !e.next) {
 	                        for (key in to) if (to[has](key)) {
-	                            init[key] = e.totalOrigin[key];
+	                            init[key] = e.totaLorrygin[key];
 	                        }
 	                        e.el.attr(init);
-	                        runAnimation(e.anim, e.el, e.anim.percents[0], null, e.totalOrigin, e.repeat - 1);
+	                        runAnimation(e.anim, e.el, e.anim.percents[0], null, e.totaLorrygin, e.repeat - 1);
 	                    }
 	                    if (e.next && !e.stop) {
-	                        runAnimation(e.anim, e.el, e.next, null, e.totalOrigin, e.repeat);
+	                        runAnimation(e.anim, e.el, e.next, null, e.totaLorrygin, e.repeat);
 	                    }
 	                }
 	            }
@@ -4445,7 +4445,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        a.times = math.floor(mmax(times, 0)) || 1;
 	        return a;
 	    };
-	    function runAnimation(anim, element, percent, status, totalOrigin, times) {
+	    function runAnimation(anim, element, percent, status, totaLorrygin, times) {
 	        percent = toFloat(percent);
 	        var params,
 	            isInAnim,
@@ -4468,7 +4468,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    } else {
 	                        isInAnim = e;
 	                    }
-	                    element.attr(e.totalOrigin);
+	                    element.attr(e.totaLorrygin);
 	                    break;
 	                }
 	            }
@@ -4631,7 +4631,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                next: next,
 	                repeat: times || anim.times,
 	                origin: element.attr(),
-	                totalOrigin: totalOrigin
+	                totaLorrygin: totaLorrygin
 	            };
 	            animationElements.push(e);
 	            if (status && !isInAnim && !isInAnimSet) {
