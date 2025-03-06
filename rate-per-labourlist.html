@@ -232,25 +232,6 @@
                     <li><a href="transporter-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Transporter List</a></li>
                   </ul>
                 </li>
-                
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                  <i class="fa fa-briefcase text-white" aria-hidden="true"></i>
-                  <span class="lan-7">Dispatch Challan</span></a>
-                  <ul class="sidebar-submenu">
-                    <li><a href="add-dispatch-challan.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Add Dispatch Challan</a></li>
-                    <li><a href="diapatch-challan-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Dispatch Challan List</a></li>
-                  </ul>
-                </li>
-
-                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                    <i class="fa fa-users text-white" aria-hidden="true"></i>
-                    <span class="lan-8">Fetch Memo</span></a>
-                  <ul class="sidebar-submenu">
-                    <li><a href="fetch-memo.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Fetch Memo</a></li>
-                    <li><a href="create-fetchmemo.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Create Fetch Memo</a></li>
-                    <li><a href="fetch-memo-list.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Fetch Memo List</a></li>
-                  </ul>
-                </li>
               
                 <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                   <i class="fa fa-user text-white" aria-hidden="true"></i>
@@ -311,13 +292,22 @@
                   <div class="card-body basic-wizard important-validation">
                     <div id="msform">
                       <form class="stepper-one row needs-validation custom-input" novalidate="">
-                        <div class="col-sm-6">
-                          <label class="form-label" for="ConsignerName">Consigner Name</label>
-                          <input class="form-control w-100 rounded border" type="text" placeholder="Enter Consigner Name" id="ConsignerName">
+                        <div class="col-sm-4">
+                          <label class="form-label" for="ConsignerName">Labour Name</label>
+                          <input class="form-control w-100 rounded border" type="text" placeholder="Enter Labour Name" id="ConsignerName">
                         </div>
-                        <div class="col-sm-6">
-                          <label class="form-label" for="ConsignerTown">Town</label>
-                          <input class="form-control w-100 rounded border" type="text" placeholder="Enter Consigner Town" id="ConsignerTown">
+                        <div class="col-sm-4">
+                          <label class="form-label" for="ConsignerTown">Labour Rate</label>
+                          <input class="form-control w-100 rounded border" type="text" placeholder="Enter Labour Rate" id="ConsignerTown">
+                        </div>
+                        <div class="col-sm-4">
+                          <label class="form-label" for="ConsignerTown">Labour Activity</label>
+                                    <select name="" id="VehicalType" class="form-control w-100 ">
+                                        <option value="">Select Activity</option>
+                                        <option value="">Loading</option>
+                                        <option value="">Shorting</option>
+                                        <option value="">UnLoading</option>
+                                    </select>
                         </div>
                         <div class="wizard-footer mt-2 d-flex gap-2 justify-content-end">
                           <button class="btn btn-primary" type="submit">Search</button>
@@ -333,83 +323,64 @@
             <div class="row">
               <!-- Daily Entry Table Start -->
               <div class="col-sm-12">
-                <div class="card">
+                <div class="card p-2">
                   <div class="card-block row">
                     <div class="col-sm-12 col-lg-12 col-xl-12">
                       <div class="table-responsive">
-                        <table class="table table-dashed">
+                        <table class="table table-dashed mt-4">
                           <thead>
-                            <tr class="bg-light">
-                              <th scope="col" class="text-center">No</th>
-                              <th scope="col" class="text-center">Name<i class="fa fa-sort opacity-25" aria-hidden="true"></i></th>
-                              <th scope="col" class="text-center">Email</th>
-                              <th scope="col" class="text-center">Town<i class="fa fa-sort opacity-25" aria-hidden="true"></i></th>
-                              <th scope="col" class="text-center">Action</th>
-                            </tr>
+                              <tr class="bg-light">
+                                  <th scope="col" class="text-center">No</th>
+                                  <th scope="col" class="text-center">Labour Name</th>
+                                  <th scope="col" class="text-center">Activity</th>
+                                  <th scope="col" class="text-center">Rate Type</th>
+                                  <th scope="col" class="text-center">Rate</th>
+                                  <th scope="col" class="text-center">Action</th>
+                              </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row" class="text-center table-data">1</th>
-                              <td class="text-center table-data">Aries</td>
-                              <td class="text-center table-data">Gym</td>
-                              <td class="text-center table-data">Energetic, adventurous, passionate leader; thrives on challenges and excitement.</td>
-                              <td class="text-center col-fix table-data"> 
-                                <ul class="action d-flex justify-content-center gap-2"> 
-                                  <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">2</th>
-                              <td class="text-center table-data">Taurus</td>
-                              <td class="text-center table-data">Dance</td>
-                              <td class="text-center table-data">Reliable, patient, and practical; enjoys comfort and material pleasures.</td>
-                              <td class=" table-data"> 
-                                <ul class="action d-flex justify-content-center gap-2"> 
-                                  <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">3</th>
-                              <td class="text-center table-data">Gemini</td>
-                              <td class="text-center table-data">Boxing</td>
-                              <td class="text-center table-data">Curious, adaptable, and communicative; loves socializing and learning new things.</td>
-                              <td class="text-center table-data"> 
-                                <ul class="action d-flex justify-content-center gap-2"> 
-                                  <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">4</th>
-                              <td class="text-center table-data">Cancer</td>
-                              <td class="text-center table-data">Gym</td>
-                              <td class="text-center table-data">Nurturing, intuitive, and protective; values home and emotional connections.</td>
-                              <td class="text-center table-data"> 
-                                <ul class="action d-flex justify-content-center gap-2"> 
-                                  <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">5</th>
-                              <td class="text-center table-data">Leo</td>
-                              <td class="text-center table-data">Yoga</td>
-                              <td class="text-center table-data">Charismatic, confident, and creative; seeks attention and loves to shine</td>
-                              <td class="text-center table-data"> 
-                                <ul class="action d-flex justify-content-center gap-2"> 
-                                  <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
+                          <tbody id="dataRows">
+                              <tr>
+                                  <td class="text-center">1</td>
+                                  <td class="text-center">Rahul</td>
+                                  <td class="text-center">Loading</td>
+                                  <td class="text-center">per tone</td>
+                                  <td class="text-center">500</td>
+                                  <td class="text-center">
+                                      <ul class="action d-flex justify-content-center">
+                                          <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
+                                          <li class="delete"> <a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td class="text-center">2</td>
+                                  <td class="text-center">Arpit</td>
+                                  <td class="text-center">Unloading</td>
+                                  <td class="text-center">per hour</td>
+                                  <td class="text-center">300</td>
+                                  <td class="text-center">
+                                      <ul class="action d-flex justify-content-center">
+                                          <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
+                                          <li class="delete"> <a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td class="text-center">3</td>
+                                  <td class="text-center">Brijesh</td>
+                                  <td class="text-center">Sorting</td>
+                                  <td class="text-center">per unit</td>
+                                  <td class="text-center">200</td>
+                                  <td class="text-center">
+                                      <ul class="action d-flex justify-content-center">
+                                          <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
+                                          <li class="delete"> <a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
+                                      </ul>
+                                  </td>
+                              </tr>
                           </tbody>
-                        </table>
+                      </table>
+                      
                       </div>
                       <div class="row justify-content-between gx-0 mx-2">
                         <div class="col-lg-4 col-md-4 col-sm-12">
