@@ -261,6 +261,22 @@
                     <li><a href="book-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Book List</a></li>
                   </ul>
               </li>
+              <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                  <span class="lan-9">Division</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="add-division.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Division</a></li>
+                  <li><a href="division-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Division List</a></li>
+                </ul>
+            </li>
+            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                  <span class="lan-9">Company</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="add-company.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Company</a></li>
+                  <li><a href="company-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Company List</a></li>
+                </ul>
+            </li>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
             </div>
           </nav>
@@ -299,9 +315,15 @@
                     </div>
                     <div class="text-white" id="text"><span>Filter</span></div>
                   </button>
-                  <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="tooltip" title="btn btn-success btn-lg" id="filter-button">
-                    <div class="text-white" id="text"><span>Upload</span></div>
-                  </button>
+                  <div class="col-lg-6 text-end">
+                    <button class="btn btn-primary" type="button" data-bs-toggle="tooltip" title="btn btn-success btn-lg">
+                      Upload
+                    </button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="tooltip" title="btn btn-success btn-lg">
+                      Export
+                    </button>
+                  </div>
+                  
                 </div>
                <!-- Filter Button End -->
             </div>
@@ -362,78 +384,74 @@
                           <thead>
                             <tr class="bg-light">
                               <th scope="col" class="text-center">No</th>
-                              <th scope="col" class="text-center">Invoice Date</th>
                               <th scope="col" class="text-center">Invoice Number</th>
+                              <th scope="col" class="text-center">Invoice Date</th>
                               <th scope="col" class="text-center">Consigner</th>
                               <th scope="col" class="text-center">Consignee</th>
                               <th scope="col" class="text-center">Quantity</th>
+                              <th scope="col" class="text-center">Weight</th>
+                              <th scope="col" class="text-center">Value</th>
+                              <th scope="col" class="text-center">Division</th>
                               <th scope="col" class="text-center">Action</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <th scope="row" class="text-center table-data">1</th>
-                              <td class="text-center table-data">24/12/2024</td>
                               <td class="text-center table-data">INV20241224001</td>
+                              <td class="text-center table-data">24/12/2024</td>
                               <td class="text-center table-data">ABC Industries</td>
                               <td class="text-center table-data">XYZ Enterprises</td>
                               <td class="text-center table-data">10</td>
-                              <td class="text-center col-fix table-data">
+                              <td class="text-center table-data">150 kg</td>
+                              <td class="text-center table-data">5,000</td>
+                              <td class="text-center table-data">Milk</td>
+                              <td class="text-center">
                                 <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="edit"><a href="#" class="bg-dark p-2 rounded" data-bs-toggle="modal" data-bs-target="#detailsModal"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
+                                  <li class="cancel">
+                                    <a href="#" class="bg-warning p-2 rounded">
+                                      <i class="fa fa-times text-white" aria-hidden="true"></i>
+                                    </a>
+                                  </li>
+                                  <li class="edit"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
                                   <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </td>
+                                  <li class="delete">
+                                    <a href="#" class="bg-danger p-2 rounded">
+                                      <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </td>
                             </tr>
                             <tr>
                               <th scope="row" class="text-center table-data">2</th>
-                              <td class="text-center table-data">25/12/2024</td>
                               <td class="text-center table-data">INV20241225002</td>
+                              <td class="text-center table-data">25/12/2024</td>
                               <td class="text-center table-data">Global Solutions</td>
                               <td class="text-center table-data">TechnoCorp</td>
                               <td class="text-center table-data">20</td>
-                              <td class="text-center col-fix table-data">
+                              <td class="text-center table-data">300 kg</td>
+                              <td class="text-center table-data">12,000</td>
+                              <td class="text-center table-data">Milk Powder</td>
+                              <td class="text-center">
                                 <ul class="action d-flex justify-content-center gap-1">
+                                  <li class="cancel">
+                                    <a href="#" class="bg-warning p-2 rounded">
+                                      <i class="fa fa-times text-white" aria-hidden="true"></i>
+                                    </a>
+                                  </li>
                                   <li class="edit"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
                                   <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
+                                  <li class="delete">
+                                    <a href="#" class="bg-danger p-2 rounded">
+                                      <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                    </a>
+                                  </li>
                                 </ul>
                               </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">3</th>
-                              <td class="text-center table-data">26/12/2024</td>
-                              <td class="text-center table-data">INV20241226003</td>
-                              <td class="text-center table-data">MegaCorp</td>
-                              <td class="text-center table-data">Innovative Solutions</td>
-                              <td class="text-center table-data">50</td>
-                              <td class="text-center col-fix table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="edit"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">4</th>
-                              <td class="text-center table-data">27/12/2024</td>
-                              <td class="text-center table-data">INV20241227004</td>
-                              <td class="text-center table-data">Prime Products</td>
-                              <td class="text-center table-data">RetailX</td>
-                              <td class="text-center table-data">15</td>
-                              <td class="text-center col-fix table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="edit"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                                
                             </tr>
                           </tbody>
                         </table>
-                        
                       </div>
                       <div class="row justify-content-between gx-0 mx-2">
                         <div class="col-lg-4 col-md-4 col-sm-12">

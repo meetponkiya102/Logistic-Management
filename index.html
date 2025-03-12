@@ -257,7 +257,22 @@
                     <li><a href="book-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Book List</a></li>
                   </ul>
                 </li>
-                
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa fa-user text-white" aria-hidden="true"></i>
+                    <span class="lan-9">Division</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="add-division.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Division</a></li>
+                    <li><a href="division-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Division List</a></li>
+                  </ul>
+              </li>
+              <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <i class="fa fa-user text-white" aria-hidden="true"></i>
+                    <span class="lan-9">Company</span></a>
+                  <ul class="sidebar-submenu">
+                    <li><a href="add-company.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Company</a></li>
+                    <li><a href="company-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Company List</a></li>
+                  </ul>
+              </li>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
             </div>
           </nav>
@@ -268,7 +283,7 @@
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h4>Default</h4>
+                  <h4>Dashboard</h4>
                 </div>
                 <div class="col-6"> 
                   <ol class="breadcrumb">
@@ -284,7 +299,44 @@
             </div>
           </div>
           <!-- Container-fluid starts-->
-          
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="vertical-main-wizard">
+                      <div class="row">    
+                        <div class="col-xxl-12 col-xl-12 col-12">
+                          <div class="tab-content" id="wizard-tabContent">
+                            <div class="tab-pane fade show active px-4" id="wizard-contact" role="tabpanel" aria-labelledby="wizard-contact-tab">
+                              <form class="needs-validation custom-input" novalidate="">
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-3 col-sm-12 text-start my-2" for="companyname">Company Name<span class="txt-danger">*</span></label>
+                                    <select name="" id="companyname" class="form-control col-lg-4">
+                                        <option value="">Select Company</option>
+                                        <option value="">ABC</option>
+                                        <option value="">XYZ</option>
+                                        <option value="">DEF</option>
+                                    </select>
+                                    <label class="form-label col-lg-2 col-md-3 col-sm-12 text-start my-2" for="VehicalType">Depot Name<span class="txt-danger">*</span></label>
+                                    <select name="" id="VehicalType" class="form-control col-lg-4">
+                                        <option value="">Select Depot</option>
+                                        <option value="">Loading</option>
+                                        <option value="">Shorting</option>
+                                        <option value="">UnLoading</option>
+                                    </select>
+                                </div> 
+                              </form> 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- Container-fluid Ends-->
         </div>
         <!-- footer start-->

@@ -257,6 +257,22 @@
                     <li><a href="book-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Book List</a></li>
                   </ul>
               </li>
+              <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                  <span class="lan-9">Division</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="add-division.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Division</a></li>
+                  <li><a href="division-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Division List</a></li>
+                </ul>
+            </li>
+            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                  <span class="lan-9">Company</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="add-company.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Company</a></li>
+                  <li><a href="company-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Company List</a></li>
+                </ul>
+            </li>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
             </div>
           </nav>
@@ -295,71 +311,116 @@
                             <div class="tab-pane fade show active px-4" id="wizard-contact" role="tabpanel" aria-labelledby="wizard-contact-tab">
                               <form class="needs-validation custom-input" novalidate="">
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDispatchChallanNumber">Dispatch Challan Number<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-10" type="text" placeholder="Enter Dispatch Challan Number" id="txtDispatchChallanNumber">
-                                </div> 
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDispatchChallanNumber">Dispatch Challan Number<span class="txt-danger">*</span></label>
+                                  <input class="form-control col-lg-10" type="text" placeholder="Enter Dispatch Challan Number" id="txtDispatchChallanNumber" value="DC123456" disabled>
+                                </div>
+                               
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtTruckNumber">Truck Number<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Truck Number" id="txtTruckNumber" value="MH01AB1234" disabled>
                                     <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtConsignerName">Consigner Name<span class="txt-danger">*</span></label>
                                     <input class="form-control col-lg-4" type="text" placeholder="Enter Consigner Name" id="txtConsignerName" value="Suresh Kumar" disabled>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Consigner">Location At Consigner<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Location" id="Consigner" value="delhi,400100, delhi" disabled>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDriverName">Driver Name<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Driver Name" id="txtDriverName" value="Ravi Singh" disabled>
                                     <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtConsigneeName">Consignee Name<span class="txt-danger">*</span></label>
                                     <input class="form-control col-lg-4" type="text" placeholder="Enter Consignee Name" id="txtConsigneeName" value="Ravi Kumar" disabled>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtConsigneeLocation">Location At Consignee<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Location" id="txtConsigneeLocation" value="Mumbai,400100, Maharashtra" disabled>
                                 </div> 
                                 <div class="row mb-3">
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtTruckNumber">
+                                    Truck Number<span class="txt-danger">*</span>
+                                  </label>
+                                  <select class="form-control col-lg-10" id="txtTruckNumber">
+                                      <option value="MH01AB1234">MH01AB1234</option>
+                                      <option value="KA05CD5678">KA05CD5678</option>
+                                      <option value="DL08EF9012">DL08EF9012</option>
+                                      <option value="TN12GH3456">TN12GH3456</option>
+                                  </select>
+                                </div>
+                                <div class="row mb-3">
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDriverName">Driver Name<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Driver Name" id="txtDriverName" value="Ravi Singh" disabled>
                                     <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtLicenceNumber">Licence Number<span class="txt-danger">*</span></label>
                                     <input class="form-control col-lg-4" type="text" placeholder="Enter Licence Number" id="txtLicenceNumber" value="DL01ABC1234" disabled>
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtConsigneeLocation">Location At Consignee<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Location" id="txtConsigneeLocation" value="Mumbai, Maharashtra" disabled>
                                 </div>
                                 <div class="row mb-3">
-                                    <!-- <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="VehicalType">Transporter Type<span class="txt-danger">*</span></label>
-                                    <select name="" id="VehicalType" class="form-control col-lg-4" onchange="toggleCompanyField()">
-                                        <option value="">Select Transporter Type</option>
-                                        <option value="own">Own</option>
-                                        <option value="transporter">Transporter</option>
-                                    </select> -->
                                     <div id="companyNameField" style="display: none; margin-left: 240px;" class="mt-2 mb-2">
                                         <input class="form-control" type="text" id="CompanyName" value="ABC Logistics Pvt. Ltd." readonly>
-                                    </div>
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtConsigneePincode">Consignee Pincode<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Consignee Pincode" id="txtConsigneePincode" value="400001" disabled>
+                                    </div> 
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtLabourName">Labour Name<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter Labour Name" id="txtLabourName" value="Mahesh Yadav" disabled>
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtLabourName">
+                                    Labour Name<span class="txt-danger">*</span>
+                                  </label>
+                                  <select class="form-control col-lg-4" id="txtLabourName">
+                                      <option value="Mahesh Yadav">Mahesh Yadav</option>
+                                      <option value="Ravi Kumar">Ravi Kumar</option>
+                                      <option value="Vikash Yadav">Vikash Yadav</option>
+                                      <option value="Sunil Patel">Sunil Patel</option>
+                                  </select>
                                     <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Date">Vehicle Reporting At</label>
-                                    <input class="form-control col-lg-4 date-input" id="date-input" type="date">
+                                    <input class="form-control col-lg-4 date-input" id="date-input" type="datetime-local">
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2">Activity</label>
-                                    <div class="col-lg-10">
-                                        <div class="row my-2">
-                                            <div class="col-md-3">
-                                                <div class="form-check">
-                                                    <input class="form-input" id="flexRadioDefault1" type="radio" name="flexRadioDefault">
-                                                    <label class="form-label" for="flexRadioDefault1">Loading</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-check">
-                                                    <input class="form-input" id="flexRadioDefault2" type="radio" name="flexRadioDefault" checked>
-                                                    <label class="form-label" for="flexRadioDefault2">Shorting</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-check">
-                                                    <input class="form-input" id="flexRadioDefault3" type="radio" name="flexRadioDefault">
-                                                    <label class="form-label" for="flexRadioDefault3">Unloading</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2">Activity</label>
+                                  <div class="col-lg-10">
+                                      <div class="row my-2">
+                                          <div class="col-md-3">
+                                              <div class="form-check">
+                                                  <input class="form-input" id="flexRadioDefault1" type="radio" name="flexRadioDefault" value="Loading">
+                                                  <label class="form-label" for="flexRadioDefault1">Loading</label>
+                                              </div>
+                                          </div>
+                              
+                                          <div class="col-md-3">
+                                              <div class="form-check">
+                                                  <input class="form-input" id="flexRadioDefault2" type="radio" name="flexRadioDefault" value="Shorting" checked>
+                                                  <label class="form-label" for="flexRadioDefault2">Shorting</label>
+                                              </div>
+                                          </div>
+                              
+                                          <div class="col-md-3">
+                                              <div class="form-check">
+                                                  <input class="form-input" id="flexRadioDefault3" type="radio" name="flexRadioDefault" value="Unloading">
+                                                  <label class="form-label" for="flexRadioDefault3">Unloading</label>
+                                              </div>
+                                          </div>
+                              
+                                      
+                                          <div class="col-md-3">
+                                              <div class="form-check">
+                                                  <input class="form-input" id="flexRadioDefault4" type="radio" name="flexRadioDefault" value="Loading + Shorting">
+                                                  <label class="form-label" for="flexRadioDefault4">Loading + Shorting</label>
+                                              </div>
+                                          </div>
+                              
+                                        
+                                          <div class="col-md-3">
+                                              <div class="form-check">
+                                                  <input class="form-input" id="flexRadioDefault5" type="radio" name="flexRadioDefault" value="Loading + Unloading">
+                                                  <label class="form-label" for="flexRadioDefault5">Loading + Unloading</label>
+                                              </div>
+                                          </div>
+                              
+                                          
+                                          <div class="col-md-3">
+                                              <div class="form-check">
+                                                  <input class="form-input" id="flexRadioDefault6" type="radio" name="flexRadioDefault" value="Shorting + Unloading">
+                                                  <label class="form-label" for="flexRadioDefault6">Shorting + Unloading</label>
+                                              </div>
+                                          </div>
+
+                                          <div class="col-md-3">
+                                              <div class="form-check">
+                                                  <input class="form-input" id="flexRadioDefault7" type="radio" name="flexRadioDefault" value="Loading + Shorting + Unloading">
+                                                  <label class="form-label" for="flexRadioDefault7">All</label>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
                             
                                 <div class="row mb-3">
                                   <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtRemarks">Description</label>
@@ -368,83 +429,79 @@
                                 <table class="table table-dashed">
                                   <thead>
                                     <tr class="bg-light">
-                                      <th scope="col" class="text-center">No</th>
-                                      <th scope="col" class="text-center">Lorry Number</th>
-                                      <th scope="col" class="text-center">Transport Name</th>
-                                      <th scope="col" class="text-center">Consigner Name</th>
+                                      <th scope="col" class="text-center">LR No</th>
+                                      <th scope="col" class="text-center">Transporter Name</th>
+                                      <th scope="col" class="text-center">Vehicle type</th>
+                                      <th scope="col" class="text-center">Quantity</th>
                                       <th scope="col" class="text-center">Weight</th>
-                                      <th scope="col" class="text-center">Origin</th>
-                                      <th scope="col" class="text-center">Destination</th>
+                                      <th scope="col" class="text-center">Division</th>
+                                      <th scope="col" class="text-center">LR Date</th>
+                                      <th scope="col" class="text-center">Consigner with Location</th>
+                                      <th scope="col" class="text-center">Consignee with Location</th>
                                       <th scope="col" class="text-center">Action</th>
                                     </tr>
                                   </thead>
                                   <tbody>
                                     <tr>
-                                      <td class="text-center table-data">1</td>
-                                      <td class="text-center table-data">LORRY001</td>
-                                      <td class="text-center table-data">Sharma Transport</td>
-                                      <td class="text-center table-data">Rajesh Kumar</td>
-                                      <td class="text-center table-data">12KG</td>
-                                      <td class="text-center table-data">New Delhi</td>
-                                      <td class="text-center table-data">Mumbai</td>
+                                      <td class="text-center table-data">lr001</td>
+                                      <td class="text-center table-data">ABC Logistics</td>
+                                      <td class="text-center table-data">Truck</td>
+                                      <td class="text-center table-data">10</td>
+                                      <td class="text-center table-data">200 kg</td>
+                                      <td class="text-center table-data">Milk</td>
+                                      <td class="text-center table-data">22-02-2025</td>
+                                      <td class="text-center table-data">ABC Transport, Mumbai</td>
+                                      <td class="text-center table-data">XYZ Logistics, Delhi</td>
                                       <td class="text-center table-data">
-                                        <ul class="action d-flex justify-content-center gap-2">
+                                        <ul>
                                           <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
                                         </ul>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td class="text-center table-data">2</td>
-                                      <td class="text-center table-data">LORRY002</td>
-                                      <td class="text-center table-data">Vishal Logistics</td>
-                                      <td class="text-center table-data">Meena Patel</td>
-                                      <td class="text-center table-data">18KG</td>
-                                      <td class="text-center table-data">Bangalore</td>
-                                      <td class="text-center table-data">Chennai</td>
+                                      <td class="text-center table-data">lr002</td>
+                                      <td class="text-center table-data">XYZ Transporters</td>
+                                      <td class="text-center table-data">Tempo</td>
+                                      <td class="text-center table-data">15</td>
+                                      <td class="text-center table-data">300 kg</td>
+                                      <td class="text-center table-data">Electronics</td>
+                                      <td class="text-center table-data">15-03-2025</td>
+                                      <td class="text-center table-data">PQR Carriers, Pune</td>
+                                      <td class="text-center table-data">LMN Freight, Bangalore</td>
                                       <td class="text-center table-data">
-                                        <ul class="action d-flex justify-content-center gap-2">
+                                        <ul>
                                           <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
                                         </ul>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td class="text-center table-data">3</td>
-                                      <td class="text-center table-data">LORRY003</td>
-                                      <td class="text-center table-data">Patel Movers</td>
-                                      <td class="text-center table-data">Ashwin Desai</td>
-                                      <td class="text-center table-data">10KG</td>
-                                      <td class="text-center table-data">Hyderabad</td>
-                                      <td class="text-center table-data">Pune</td>
+                                      <td class="text-center table-data">lr003</td>
+                                      <td class="text-center table-data">LMN Movers</td>
+                                      <td class="text-center table-data">Truck</td>
+                                      <td class="text-center table-data">20</td>
+                                      <td class="text-center table-data">500 kg</td>
+                                      <td class="text-center table-data">West</td>
+                                      <td class="text-center table-data">01-04-2025</td>
+                                      <td class="text-center table-data">LMN Transports, Chennai</td>
+                                      <td class="text-center table-data">ABC Goods, Hyderabad</td>
                                       <td class="text-center table-data">
-                                        <ul class="action d-flex justify-content-center gap-2">
+                                        <ul>
                                           <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
                                         </ul>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td class="text-center table-data">4</td>
-                                      <td class="text-center table-data">LORRY004</td>
-                                      <td class="text-center table-data">Kumar Freight</td>
-                                      <td class="text-center table-data">Ananya Gupta</td>
-                                      <td class="text-center table-data">25KG</td>
-                                      <td class="text-center table-data">Kolkata</td>
-                                      <td class="text-center table-data">Ahmedabad</td>
+                                      <td class="text-center table-data">lr004</td>
+                                      <td class="text-center table-data">XYZ Logistics</td>
+                                      <td class="text-center table-data">Truck</td>
+                                      <td class="text-center table-data">25</td>
+                                      <td class="text-center table-data">700 kg</td>
+                                      <td class="text-center table-data">East</td>
+                                      <td class="text-center table-data">10-05-2025</td>
+                                      <td class="text-center table-data">XYZ Logistics, Delhi</td>
+                                      <td class="text-center table-data">PQR Freight, Mumbai</td>
                                       <td class="text-center table-data">
-                                        <ul class="action d-flex justify-content-center gap-2">
-                                          <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td class="text-center table-data">5</td>
-                                      <td class="text-center table-data">LORRY005</td>
-                                      <td class="text-center table-data">Singh Logistics</td>
-                                      <td class="text-center table-data">Sanjay Mehta</td>
-                                      <td class="text-center table-data">30KG</td>
-                                      <td class="text-center table-data">Jaipur</td>
-                                      <td class="text-center table-data">Lucknow</td>
-                                      <td class="text-center table-data">
-                                        <ul class="action d-flex justify-content-center gap-2">
+                                        <ul>
                                           <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
                                         </ul>
                                       </td>

@@ -257,6 +257,22 @@
                     <li><a href="book-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Book List</a></li>
                   </ul>
               </li>
+              <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                  <span class="lan-9">Division</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="add-division.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Division</a></li>
+                  <li><a href="division-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Division List</a></li>
+                </ul>
+            </li>
+            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                  <span class="lan-9">Company</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="add-company.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Company</a></li>
+                  <li><a href="company-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Company List</a></li>
+                </ul>
+            </li>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
             </div>
           </nav>
@@ -294,20 +310,15 @@
                           <div class="tab-content" id="wizard-tabContent">
                             <div class="tab-pane fade show active px-4" id="wizard-contact" role="tabpanel" aria-labelledby="wizard-contact-tab">
                               <form class="needs-validation custom-input" novalidate="">
-                                <!-- <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="member-name">Full Name<span class="txt-danger">*</span></label>
-                                  <input class="form-control col-lg-10" type="text" placeholder="Enter Full Name" id="member-name">
-                                </div>   -->
                                 <div class="row mb-3">
                                   <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="VehicalNumber">Freight Number<span class="txt-danger">*</span></label>
-                                  <input class="form-control col-lg-4" type="number" placeholder="Enter Freight Number" id="VehicalNumber">
+                                  <input class="form-control col-lg-10" type="number" placeholder="Enter Freight Number" id="VehicalNumber" value="123456" disabled>
+                                </div>                                 
+                                <div class="row mb-3">
                                   <lable class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Date">Date</lable>
                                   <input class="form-control col-lg-4 date-input" id="date-input" type="date">
-                                </div>
-                                <div class="row mb-3">
-                                    
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Charges<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="text" placeholder="Enter charges" id="txtOwnerName">
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Charges<span class="txt-danger">*</span></label>
+                                  <input class="form-control col-lg-4" type="text" placeholder="Enter charges" id="txtOwnerName">
                                 </div>
                                 <div class="row mb-3">
                                     <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Detention Charges<span class="txt-danger">*</span></label>
@@ -319,17 +330,144 @@
                                     <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtOwnerName">Micilleues Charges<span class="txt-danger">*</span></label>
                                     <input class="form-control col-lg-4" type="text" placeholder="Enter charges" id="txtOwnerName">
                                 </div>
-                                <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtRemarks">InsuranceValidity Number</label>
-                                    <input class="form-control col-lg-10 digit" type="number" placeholder="Enter Insurance Validity Number" id="EngineNumber">
-                                </div>
+                                
                                 <div class="row mb-3">
                                   <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtRemarks">Deduction Description</label>
                                   <textarea class="form-control border col-lg-10" id="txtRemarks" rows="3"></textarea>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtRemarks">Total Payable Ammount :</label>
-                                    <input class="form-control col-lg-10 digit" type="number" disabled value="8000" id="EngineNumber">
+                                  <label class="form-label col-lg-3 col-md-4 col-sm-12 text-start my-2" for="txtRemarks">Total Payable Ammount To Transporter :</label>
+                                  <input class="form-control col-lg-9 digit" type="number" disabled value="8000" id="EngineNumber">
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-3 col-md-4 col-sm-12 text-start my-2" for="txtRemarks">Total Payable Ammount To Labour:</label>
+                                    <input class="form-control col-lg-9 digit" type="number" disabled value="8000" id="EngineNumber">
+                                </div>
+
+                                <div>
+                                  <table class="table table-dashed">
+                                    <thead>
+                                      <tr class="bg-light">
+                                        <th scope="col" class="text-center">No</th>
+                                        <th scope="col" class="text-center">LR Number </th>
+                                        <th scope="col" class="text-center">Consigner </th>
+                                        <th scope="col" class="text-center">Consignee </th>
+                                        <th scope="col" class="text-center">LR Date </th>
+                                        <th scope="col" class="text-center">Transport </th>
+                                        <th scope="col" class="text-center">Truck Driver </th>
+                                        <th scope="col" class="text-center">Quantity </th>
+                                        <th scope="col" class="text-center">Weight </th>
+                                        <th scope="col" class="text-center">Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row" class="text-center table-data">1</th>
+                                        <td class="text-center table-data">LR123456</td>
+                                        <td class="text-center table-data">ABC Industries</td>
+                                        <td class="text-center table-data">XYZ Distributors</td>
+                                        <td class="text-center table-data">22-10-2025</td>
+                                        <td class="text-center table-data">Shreenath Transport</td>
+                                        <td class="text-center table-data">Rajesh Kumar</td>
+                                        <td class="text-center table-data">12 Boxes</td>
+                                        <td class="text-center table-data">45.2 KG</td>
+                                        <td class="text-center col-fix table-data">
+                                          <ul class="action d-flex justify-content-center gap-2">
+                                            <li class="delete">
+                                              <a href="#" class="bg-danger p-2 rounded">
+                                                <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row" class="text-center table-data">2</th>
+                                        <td class="text-center table-data">LR123457</td>
+                                        <td class="text-center table-data">Global Traders</td>
+                                        <td class="text-center table-data">ABC Enterprises</td>
+                                        <td class="text-center table-data">23-10-2025</td>
+                                        <td class="text-center table-data">Shree Logistics</td>
+                                        <td class="text-center table-data">Suresh Patel</td>
+                                        <td class="text-center table-data">20 Boxes</td>
+                                        <td class="text-center table-data">50.0 KG</td>
+                                        <td class="text-center col-fix table-data">
+                                          <ul class="action d-flex justify-content-center gap-2">
+                                            <li class="delete">
+                                              <a href="#" class="bg-danger p-2 rounded">
+                                                <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row" class="text-center table-data">3</th>
+                                        <td class="text-center table-data">LR123458</td>
+                                        <td class="text-center table-data">Quick Freight</td>
+                                        <td class="text-center table-data">XYZ Distributors</td>
+                                        <td class="text-center table-data">24-10-2025</td>
+                                        <td class="text-center table-data">Vishal Logistics</td>
+                                        <td class="text-center table-data">Anil Sharma</td>
+                                        <td class="text-center table-data">15 Boxes</td>
+                                        <td class="text-center table-data">60.0 KG</td>
+                                        <td class="text-center col-fix table-data">
+                                          <ul class="action d-flex justify-content-center gap-2">
+                                            <li class="delete">
+                                              <a href="#" class="bg-danger p-2 rounded">
+                                                <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row" class="text-center table-data">4</th>
+                                        <td class="text-center table-data">LR123459</td>
+                                        <td class="text-center table-data">Alpha Corp</td>
+                                        <td class="text-center table-data">Omega Traders</td>
+                                        <td class="text-center table-data">25-10-2025</td>
+                                        <td class="text-center table-data">Royal Logistics</td>
+                                        <td class="text-center table-data">Ravi Kumar</td>
+                                        <td class="text-center table-data">25 Boxes</td>
+                                        <td class="text-center table-data">75.5 KG</td>
+                                        <td class="text-center col-fix table-data">
+                                          <ul class="action d-flex justify-content-center gap-2">
+                                            <li class="delete">
+                                              <a href="#" class="bg-danger p-2 rounded">
+                                                <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row" class="text-center table-data">5</th>
+                                        <td class="text-center table-data">LR123460</td>
+                                        <td class="text-center table-data">Beta Enterprises</td>
+                                        <td class="text-center table-data">Delta Traders</td>
+                                        <td class="text-center table-data">26-10-2025</td>
+                                        <td class="text-center table-data">Naveen Transport</td>
+                                        <td class="text-center table-data">Sunil Yadav</td>
+                                        <td class="text-center table-data">30 Boxes</td>
+                                        <td class="text-center table-data">90.0 KG</td>
+                                        <td class="text-center col-fix table-data">
+                                          <ul class="action d-flex justify-content-center gap-2">
+                                            <li class="delete">
+                                              <a href="#" class="bg-danger p-2 rounded">
+                                                <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+
+                                <div class="btn-showcase text-center">
+                                  <button class="btn btn-primary" type="submit">Save</button>
+                                  <button class="btn btn-dark" type="reset">Reset</button>
                                 </div>
                               </form> 
                             </div>
@@ -341,175 +479,6 @@
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="card">
-                  <div class="card-block row">
-                    <div class="col-sm-12 col-lg-12 col-xl-12">
-                      <div class="table-responsive">
-                        <table class="table table-dashed">
-                          <thead>
-                            <tr class="bg-light">
-                              <th scope="col" class="text-center">No</th>
-                              <th scope="col" class="text-center">LR Number </th>
-                              <th scope="col" class="text-center">Consigner </th>
-                              <th scope="col" class="text-center">Consignee </th>
-                              <th scope="col" class="text-center">LR Date </th>
-                              <th scope="col" class="text-center">Transport </th>
-                              <th scope="col" class="text-center">Truck Driver </th>
-                              <th scope="col" class="text-center">Quantity </th>
-                              <th scope="col" class="text-center">Weight </th>
-                              <th scope="col" class="text-center">Action</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row" class="text-center table-data">1</th>
-                              <td class="text-center table-data">LR123456</td>
-                              <td class="text-center table-data">ABC Industries</td>
-                              <td class="text-center table-data">XYZ Distributors</td>
-                              <td class="text-center table-data">22-10-2025</td>
-                              <td class="text-center table-data">Shreenath Transport</td>
-                              <td class="text-center table-data">Rajesh Kumar</td>
-                              <td class="text-center table-data">12 Boxes</td>
-                              <td class="text-center table-data">45.2 KG</td>
-                              <td class="text-center col-fix table-data">
-                                <ul class="action d-flex justify-content-center gap-2">
-                                  <li class="delete">
-                                    <a href="#" class="bg-danger p-2 rounded">
-                                      <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">2</th>
-                              <td class="text-center table-data">LR123457</td>
-                              <td class="text-center table-data">Global Traders</td>
-                              <td class="text-center table-data">ABC Enterprises</td>
-                              <td class="text-center table-data">23-10-2025</td>
-                              <td class="text-center table-data">Shree Logistics</td>
-                              <td class="text-center table-data">Suresh Patel</td>
-                              <td class="text-center table-data">20 Boxes</td>
-                              <td class="text-center table-data">50.0 KG</td>
-                              <td class="text-center col-fix table-data">
-                                <ul class="action d-flex justify-content-center gap-2">
-                                  <li class="delete">
-                                    <a href="#" class="bg-danger p-2 rounded">
-                                      <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">3</th>
-                              <td class="text-center table-data">LR123458</td>
-                              <td class="text-center table-data">Quick Freight</td>
-                              <td class="text-center table-data">XYZ Distributors</td>
-                              <td class="text-center table-data">24-10-2025</td>
-                              <td class="text-center table-data">Vishal Logistics</td>
-                              <td class="text-center table-data">Anil Sharma</td>
-                              <td class="text-center table-data">15 Boxes</td>
-                              <td class="text-center table-data">60.0 KG</td>
-                              <td class="text-center col-fix table-data">
-                                <ul class="action d-flex justify-content-center gap-2">
-                                  <li class="delete">
-                                    <a href="#" class="bg-danger p-2 rounded">
-                                      <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">4</th>
-                              <td class="text-center table-data">LR123459</td>
-                              <td class="text-center table-data">Alpha Corp</td>
-                              <td class="text-center table-data">Omega Traders</td>
-                              <td class="text-center table-data">25-10-2025</td>
-                              <td class="text-center table-data">Royal Logistics</td>
-                              <td class="text-center table-data">Ravi Kumar</td>
-                              <td class="text-center table-data">25 Boxes</td>
-                              <td class="text-center table-data">75.5 KG</td>
-                              <td class="text-center col-fix table-data">
-                                <ul class="action d-flex justify-content-center gap-2">
-                                  <li class="delete">
-                                    <a href="#" class="bg-danger p-2 rounded">
-                                      <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">5</th>
-                              <td class="text-center table-data">LR123460</td>
-                              <td class="text-center table-data">Beta Enterprises</td>
-                              <td class="text-center table-data">Delta Traders</td>
-                              <td class="text-center table-data">26-10-2025</td>
-                              <td class="text-center table-data">Naveen Transport</td>
-                              <td class="text-center table-data">Sunil Yadav</td>
-                              <td class="text-center table-data">30 Boxes</td>
-                              <td class="text-center table-data">90.0 KG</td>
-                              <td class="text-center col-fix table-data">
-                                <ul class="action d-flex justify-content-center gap-2">
-                                  <li class="delete">
-                                    <a href="#" class="bg-danger p-2 rounded">
-                                      <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        
-                        
-                      </div>
-                      <div class="row justify-content-between gx-0 mx-2">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                          <label class="mt-2">Select 
-                          <select id="rows" name="rows" class="p-2 border mx-2">
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                            <option value="40">40</option>
-                          </select>
-                          Entries </label>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-12  d-flex justify-content-end" id="paginatgion">
-                          <nav aria-label="Page navigation example" class="mt-2">
-                            <ul class="pagination">
-                              <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                  <span aria-hidden="true" class="text-dark">&laquo;</span>
-                                  <span class="sr-only">Previous</span>
-                                </a>  
-                              </li>
-                              <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
-                              <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
-                              <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                              <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                  <span aria-hidden="true" class="text-dark">&raquo;</span>
-                                  <span class="sr-only" >Next</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </nav>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-             </div>
-          </div>
-          <div class="btn-showcase text-center">
-            <button class="btn btn-primary" type="submit">Save</button>
-            <button class="btn btn-dark" type="reset">Reset</button>
           </div>
           <!-- Container-fluid Ends-->
         </div>

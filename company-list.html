@@ -287,7 +287,7 @@
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h4>Customer</h4>
+                  <h4>Company</h4>
                 </div>
                 <div class="col-6"> 
                   <ol class="breadcrumb">
@@ -295,8 +295,8 @@
                         <svg class="stroke-icon">
                           <use href="./assets/svg/icon-sprite.svg#stroke-home"></use>
                         </svg></a></li>
-                    <li class="breadcrumb-item">Customer</li>
-                    <li class="breadcrumb-item active">Customer List</li>
+                    <li class="breadcrumb-item">Company</li>
+                    <li class="breadcrumb-item active">Company List</li>
                   </ol>
                 </div>
               </div>
@@ -322,132 +322,82 @@
               <!-- Filter Form Start -->
               <div class="col-sm-12">
                 <div class="card height-equal">
-                    <div class="card-body basic-wizard important-validation">
-                        <div id="msform">
-                            <form class="stepper-one row needs-validation custom-input" novalidate="">
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="CustomerName">Customer Name</label>
-                                    <select class="form-control w-100 rounded border" id="CustomerName">
-                                        <option value="">Select Customer</option>
-                                        <option value="ABC Ltd.">ABC Ltd.</option>
-                                        <option value="XYZ Enterprises">XYZ Enterprises</option>
-                                        <option value="LMN Corp">LMN Corp</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="ContactPerson">Contact Person</label>
-                                    <input class="form-control w-100 rounded border" type="text" placeholder="Enter Contact Person" id="ContactPerson">
-                                </div>
-                                <div class="wizard-footer mt-2 d-flex gap-2 justify-content-end">
-                                    <button class="btn btn-primary" type="submit">Search</button>
-                                    <button class="btn btn-dark" type="reset">Reset</button>
-                                </div>
-                            </form>
+                  <div class="card-body basic-wizard important-validation">
+                    <div id="msform">
+                      <form class="stepper-one row needs-validation custom-input" novalidate="">
+                        <div class="col-sm-4">
+                          <label class="form-label" for="CompanyName">Company Name</label>
+                          <select class="form-control w-100 rounded border" id="CompanyName">
+                            <option value="">Select Company</option>
+                            <option value="Labour1">Aarav Sharma</option>
+                            <option value="Labour2">Ishaan Patel</option>
+                            <option value="Labour3">Vivaan Reddy</option>
+                            <option value="Labour4">Aditi Gupta</option>
+                            <option value="Labour5">Priya Singh</option>
+                          </select>
                         </div>
+
+                        <div class="wizard-footer mt-2 d-flex gap-2 justify-content-end">
+                          <button class="btn btn-primary" type="submit">Search</button>
+                          <button class="btn btn-dark" type="reset">Reset</button>
+                        </div>
+                      </form>
+                      
                     </div>
+                  </div>
                 </div>
-            </div>
-            
+              </div>
               <!-- Filter Form end -->
             </div>
             <div class="row">
               <!-- Daily Entry Table Start -->
               <div class="col-sm-12">
-                <div class="card">
+                <div class="card p-2">
                   <div class="card-block row">
                     <div class="col-sm-12 col-lg-12 col-xl-12">
                       <div class="table-responsive">
-                        <table class="table table-dashed">
+                        <table class="table table-dashed mt-4">
                           <thead>
-                            <tr class="bg-light">
-                              <th scope="col" class="text-center">No</th>
-                              <th scope="col" class="text-center">Name</th>
-                              <th scope="col" class="text-center">Email</th>
-                              <th scope="col" class="text-center">Address</th>
-                              <th scope="col" class="text-center">Contact Person Name</th>
-                              <th scope="col" class="text-center">Contact Number</th>
-                              <th scope="col" class="text-center">Action</th>
-                            </tr>
+                              <tr class="bg-light">
+                                  <th scope="col" class="text-center">No</th>
+                                  <th scope="col" class="text-center">Company Name</th>
+                                  <th scope="col" class="text-center">Action</th>
+                              </tr>
                           </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row" class="text-center table-data">1</th>
-                              <td class="text-center table-data">John Doe</td>
-                              <td class="text-center table-data">johndoe@example.com</td>
-                              <td class="text-center table-data">New York, NY</td>
-                              <td class="text-center table-data">Jani Doe</td>
-                              <td class="text-center table-data">+1 987-654-3210</td>
-                              <td class="text-center table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="view"><a href="#" class="bg-dark p-2 rounded" data-bs-toggle="modal" data-bs-target="#detailsModal1"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">2</th>
-                              <td class="text-center table-data">Emily Clark</td>
-                              <td class="text-center table-data">emilyclark@example.com</td>
-                              <td class="text-center table-data">Los Angeles, CA</td>
-                              <td class="text-center table-data">Mark Clark</td>
-                              <td class="text-center table-data">+1 998-877-7665</td>
-                              <td class="text-center table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="view"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">3</th>
-                              <td class="text-center table-data">Michael Smith</td>
-                              <td class="text-center table-data">michaelsmith@example.com</td>
-                              <td class="text-center table-data">Chicago, IL</td>
-                              <td class="text-center table-data">Sarah Smith</td>
-                              <td class="text-center table-data">+1 923-456-7890</td>
-                              <td class="text-center table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="view"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">4</th>
-                              <td class="text-center table-data">Sophia Williams</td>
-                              <td class="text-center table-data">sophiawilliams@example.com</td>
-                              <td class="text-center table-data">San Francisco, CA</td>
-                              <td class="text-center table-data">David Williams</td>
-                              <td class="text-center table-data">+1 903-456-7890</td>
-                              <td class="text-center table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="view"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">5</th>
-                              <td class="text-center table-data">James Brown</td>
-                              <td class="text-center table-data">jamesbrown@example.com</td>
-                              <td class="text-center table-data">Miami, FL</td>
-                              <td class="text-center table-data">Laura Brown</td>
-                              <td class="text-center table-data">+1 812-345-6789</td>
-                              <td class="text-center table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="view"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
+                          <tbody id="dataRows">
+                              <tr>
+                                  <td class="text-center">1</td>
+                                  <td class="text-center">ABC PVT LTD.</td>
+                                  <td class="text-center">
+                                      <ul class="action d-flex justify-content-center gap-1">
+                                          <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
+                                          <li class="delete"> <a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td class="text-center">2</td>
+                                  <td class="text-center">XYZ PVT LTD.</td>
+                                  <td class="text-center">
+                                      <ul class="action d-flex justify-content-center gap-1">
+                                          <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
+                                          <li class="delete"> <a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
+                                      </ul>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td class="text-center">3</td>
+                                  <td class="text-center">DEF PVT LTD.</td>
+                                  <td class="text-center">
+                                      <ul class="action d-flex justify-content-center gap-1">
+                                          <li class="edit"> <a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
+                                          <li class="delete"> <a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
+                                      </ul>
+                                  </td>
+                              </tr>
                           </tbody>
-                        </table>
-                        
+                      </table>
+                      
                       </div>
                       <div class="row justify-content-between gx-0 mx-2">
                         <div class="col-lg-4 col-md-4 col-sm-12">
@@ -492,26 +442,6 @@
             
           </div>
           <!-- Container-fluid Ends-->
-        </div>
-        <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="detailsModalLabel">Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p><strong>Name:John Doe</strong> <span id="modalName"></span></p>
-                <p><strong>Email:john@gmail.com</strong> <span id="modalEmail"></span></p>
-                <p><strong>Address:New York</strong> <span id="modalAddress"></span></p>
-                <p><strong>Contact Person:Jani Doe</strong> <span id="modalContactPerson"></span></p>
-                <p><strong>Contact Number:65455 43210</strong> <span id="modalContactNumber"></span></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
         </div>
         <!-- footer start-->
         

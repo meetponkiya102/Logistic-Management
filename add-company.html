@@ -39,10 +39,6 @@
     <link id="color" rel="stylesheet" href="./assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
-
-    <!-- custom style -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/view-css/filter.css">
-
   </head>
   <body> 
     <!-- loader starts-->
@@ -99,6 +95,7 @@
               </li>
             </ul>
           </div>
+          
         </div>
       </div>
       <!-- Page Header Ends-->
@@ -153,7 +150,7 @@
                   <i class="fa fa-briefcase text-white" aria-hidden="true"></i>
                   <span class="lan-7">Dispatch Challan</span></a>
                   <ul class="sidebar-submenu">
-                    <li><a href="create-dc.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i>Create Dispatch Challan</a></li>
+                    <li><a href="create-dc.html"><i class="fa fa-plus-square text-white" aria-hidden="true"></i> Create Dispatch Challan</a></li>
                     <li><a href="diapatch-challan-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Dispatch Challan List</a></li>
                   </ul>
                 </li>
@@ -260,23 +257,23 @@
                     <li><a href="add-book.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Book</a></li>
                     <li><a href="book-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Book List</a></li>
                   </ul>
-              </li>
-              <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                <i class="fa fa-user text-white" aria-hidden="true"></i>
-                  <span class="lan-9">Division</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="add-division.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Division</a></li>
-                  <li><a href="division-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Division List</a></li>
-                </ul>
-            </li>
-            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                <i class="fa fa-user text-white" aria-hidden="true"></i>
-                  <span class="lan-9">Company</span></a>
-                <ul class="sidebar-submenu">
-                  <li><a href="add-company.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Company</a></li>
-                  <li><a href="company-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Company List</a></li>
-                </ul>
-            </li>
+                </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-user text-white" aria-hidden="true"></i>
+                      <span class="lan-9">Division</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-division.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Division</a></li>
+                      <li><a href="division-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Division List</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                    <i class="fa fa-user text-white" aria-hidden="true"></i>
+                      <span class="lan-9">Company</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="add-company.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Company</a></li>
+                      <li><a href="company-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Company List</a></li>
+                    </ul>
+                </li>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
             </div>
           </nav>
@@ -287,16 +284,16 @@
             <div class="page-title">
               <div class="row">
                 <div class="col-6">
-                  <h4>Customer</h4>
+                  <h4>Company</h4>
                 </div>
                 <div class="col-6"> 
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">                                       
                         <svg class="stroke-icon">
-                          <use href="./assets/svg/icon-sprite.svg#stroke-home"></use>
+                          <use href="../assets/svg/icon-sprite.svg#stroke-home"></use>
                         </svg></a></li>
-                    <li class="breadcrumb-item">Customer</li>
-                    <li class="breadcrumb-item active">Customer List</li>
+                    <li class="breadcrumb-item">Company</li>
+                    <li class="breadcrumb-item active">Add Company</li>
                   </ol>
                 </div>
               </div>
@@ -305,216 +302,38 @@
           <!-- Container-fluid starts-->
           <div class="container-fluid">
             <div class="row">
-              <!--  er Button Start -->
-               <div class="col-lg-12 d-flex justify-content-start ms-md-auto mb-3">
-                  <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="tooltip" title="btn btn-success btn-lg" id="filter-button">
-                    <div class="icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="filter" >
-                        <polygon fill="none" stroke="white" stroke-miterlimit="10" stroke-width="4" points="2 6 2 10 26 34 26 58 38 58 38 34 62 10 62 6 2 6"></polygon>
-                      </svg>
-                    </div>
-                    <div class="text-white" id="text"><span>Filter</span></div>
-                  </button>
-                </div>
-               <!-- Filter Button End -->
-            </div>
-            <div class="row" id="filter-form">
-              <!-- Filter Form Start -->
-              <div class="col-sm-12">
-                <div class="card height-equal">
-                    <div class="card-body basic-wizard important-validation">
-                        <div id="msform">
-                            <form class="stepper-one row needs-validation custom-input" novalidate="">
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="CustomerName">Customer Name</label>
-                                    <select class="form-control w-100 rounded border" id="CustomerName">
-                                        <option value="">Select Customer</option>
-                                        <option value="ABC Ltd.">ABC Ltd.</option>
-                                        <option value="XYZ Enterprises">XYZ Enterprises</option>
-                                        <option value="LMN Corp">LMN Corp</option>
-                                    </select>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label class="form-label" for="ContactPerson">Contact Person</label>
-                                    <input class="form-control w-100 rounded border" type="text" placeholder="Enter Contact Person" id="ContactPerson">
-                                </div>
-                                <div class="wizard-footer mt-2 d-flex gap-2 justify-content-end">
-                                    <button class="btn btn-primary" type="submit">Search</button>
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="vertical-main-wizard">
+                      <div class="row">    
+                        <div class="col-xxl-12 col-xl-12 col-12">
+                          <div class="tab-content" id="wizard-tabContent">
+                            <div class="tab-pane fade show active px-4" id="wizard-contact" role="tabpanel" aria-labelledby="wizard-contact-tab">
+                              <form class="needs-validation custom-input" novalidate="">
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-3 col-sm-12 text-start my-2" for="CompanyName">Company Name<span class="txt-danger">*</span></label>
+                                    <input type="text" class="form-control col-lg-10" placeholder="Enter Company Name" id="CompanyName">
+                                </div> 
+                                
+                                <div class="btn-showcase text-center">
+                                    <button class="btn btn-primary" type="submit">Save</button>
                                     <button class="btn btn-dark" type="reset">Reset</button>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-              <!-- Filter Form end -->
-            </div>
-            <div class="row">
-              <!-- Daily Entry Table Start -->
-              <div class="col-sm-12">
-                <div class="card">
-                  <div class="card-block row">
-                    <div class="col-sm-12 col-lg-12 col-xl-12">
-                      <div class="table-responsive">
-                        <table class="table table-dashed">
-                          <thead>
-                            <tr class="bg-light">
-                              <th scope="col" class="text-center">No</th>
-                              <th scope="col" class="text-center">Name</th>
-                              <th scope="col" class="text-center">Email</th>
-                              <th scope="col" class="text-center">Address</th>
-                              <th scope="col" class="text-center">Contact Person Name</th>
-                              <th scope="col" class="text-center">Contact Number</th>
-                              <th scope="col" class="text-center">Action</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row" class="text-center table-data">1</th>
-                              <td class="text-center table-data">John Doe</td>
-                              <td class="text-center table-data">johndoe@example.com</td>
-                              <td class="text-center table-data">New York, NY</td>
-                              <td class="text-center table-data">Jani Doe</td>
-                              <td class="text-center table-data">+1 987-654-3210</td>
-                              <td class="text-center table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="view"><a href="#" class="bg-dark p-2 rounded" data-bs-toggle="modal" data-bs-target="#detailsModal1"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">2</th>
-                              <td class="text-center table-data">Emily Clark</td>
-                              <td class="text-center table-data">emilyclark@example.com</td>
-                              <td class="text-center table-data">Los Angeles, CA</td>
-                              <td class="text-center table-data">Mark Clark</td>
-                              <td class="text-center table-data">+1 998-877-7665</td>
-                              <td class="text-center table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="view"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">3</th>
-                              <td class="text-center table-data">Michael Smith</td>
-                              <td class="text-center table-data">michaelsmith@example.com</td>
-                              <td class="text-center table-data">Chicago, IL</td>
-                              <td class="text-center table-data">Sarah Smith</td>
-                              <td class="text-center table-data">+1 923-456-7890</td>
-                              <td class="text-center table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="view"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">4</th>
-                              <td class="text-center table-data">Sophia Williams</td>
-                              <td class="text-center table-data">sophiawilliams@example.com</td>
-                              <td class="text-center table-data">San Francisco, CA</td>
-                              <td class="text-center table-data">David Williams</td>
-                              <td class="text-center table-data">+1 903-456-7890</td>
-                              <td class="text-center table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="view"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                            <tr>
-                              <th scope="row" class="text-center table-data">5</th>
-                              <td class="text-center table-data">James Brown</td>
-                              <td class="text-center table-data">jamesbrown@example.com</td>
-                              <td class="text-center table-data">Miami, FL</td>
-                              <td class="text-center table-data">Laura Brown</td>
-                              <td class="text-center table-data">+1 812-345-6789</td>
-                              <td class="text-center table-data">
-                                <ul class="action d-flex justify-content-center gap-1">
-                                  <li class="view"><a href="#" class="bg-dark p-2 rounded"><i class="fa fa-eye text-white" aria-hidden="true"></i></a></li>
-                                  <li class="edit"><a href="#" class="bg-success p-2 rounded"><i class="fa fa-pencil text-white" aria-hidden="true"></i></a></li>
-                                  <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                </ul>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        
-                      </div>
-                      <div class="row justify-content-between gx-0 mx-2">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                          <label class="mt-2">Select 
-                          <select id="rows" name="rows" class="p-2 border mx-2">
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                            <option value="40">40</option>
-                          </select>
-                          Entries </label>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-12  d-flex justify-content-end" id="paginatgion">
-                          <nav aria-label="Page navigation example" class="mt-2">
-                            <ul class="pagination">
-                              <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                  <span aria-hidden="true" class="text-dark">&laquo;</span>
-                                  <span class="sr-only">Previous</span>
-                                </a>  
-                              </li>
-                              <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
-                              <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
-                              <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                              <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                  <span aria-hidden="true" class="text-dark">&raquo;</span>
-                                  <span class="sr-only" >Next</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </nav>
+                              </form> 
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <!-- Daily Entry Table Start -->
             </div>
-            
           </div>
           <!-- Container-fluid Ends-->
         </div>
-        <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="detailsModalLabel">Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <p><strong>Name:John Doe</strong> <span id="modalName"></span></p>
-                <p><strong>Email:john@gmail.com</strong> <span id="modalEmail"></span></p>
-                <p><strong>Address:New York</strong> <span id="modalAddress"></span></p>
-                <p><strong>Contact Person:Jani Doe</strong> <span id="modalContactPerson"></span></p>
-                <p><strong>Contact Number:65455 43210</strong> <span id="modalContactNumber"></span></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- footer start-->
-        
+       
       </div>
     </div>
     <!-- latest jquery-->
@@ -545,7 +364,6 @@
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="./assets/js/script.js"></script> 
-    <script src="./assets/view-js/filter.js"></script> 
     <!-- <script src="./assets/js/theme-customizer/customizer.js"></script> -->
   </body>
 </html>

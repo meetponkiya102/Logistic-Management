@@ -265,6 +265,22 @@
                     <li><a href="book-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Book List</a></li>
                   </ul>
               </li>
+              <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                  <span class="lan-9">Division</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="add-division.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Division</a></li>
+                  <li><a href="division-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Division List</a></li>
+                </ul>
+            </li>
+            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                  <span class="lan-9">Company</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="add-company.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Company</a></li>
+                  <li><a href="company-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Company List</a></li>
+                </ul>
+            </li>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
             </div>
           </nav>
@@ -312,60 +328,40 @@
                                     </select>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneeName">Consigner<span class="txt-danger">*</span></label>
-                                    <select name="" id="ConsogneeName" class="form-control col-lg-4">
-                                        <option value="">abc</option>
-                                        <option value="">def</option>
-                                        <option value="">xyz</option>
+                                  <label class="form-label col-lg-3 col-md-4 col-sm-12 text-start my-2">Is Customer is Consigner?</label>
+                                  <div class="col-lg-6 pt-2 d-flex gap-2">
+                                    <div class="yes">
+                                      <input type="radio" id="yes" name="fav_language" value="yes">
+                                      <label for="yes" class="form-label">Yes</label>
+                                    </div>
+                                    <div class="no">
+                                      <input type="radio" id="no" name="fav_language" value="No">
+                                      <label for="no" class="form-label">No</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsigneeName">Consigner<span class="txt-danger">*</span></label>
+                                    <select name="" id="ConsigneeName" class="form-control col-lg-4">
+                                        <option value="">abc-27AAACG1234C1ZV</option>
+                                        <option value="">def-27AAACG1234C1ZV</option>
+                                        <option value="">xyz-27AAACG1234C1ZV</option>
                                     </select>
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsignerName">Consognee<span class="txt-danger">*</span></label>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsignerName">Consignee<span class="txt-danger">*</span></label>
                                     <select name="" id="ConsignerName" class="form-control col-lg-4">
-                                        <option value="">abc</option>
-                                        <option value="">def</option>
-                                        <option value="">xyz</option>
+                                        <option value="">abc-27AAACG1234C1ZV</option>
+                                        <option value="">def-27AAACG1234C1ZV</option>
+                                        <option value="">xyz-27AAACG1234C1ZV</option>
                                     </select>
                                 </div>
                                 <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneeAddress">Consigner Address</label>
-                                  <span class="form-control col-lg-4" id="ConsogneeAddress">1234 Main Street, Mumbai, Maharashtra</span>
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsigneeAddress">Consigner Address</label>
+                                  <span class="form-control col-lg-4" id="ConsigneeAddress">1234 Main Street, Mumbai,110001, Maharashtra</span>
                                   
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="consignerAddress">Consognee Address</label>
-                                  <span class="form-control col-lg-4" id="consignerAddress">5678 Another Street, Delhi, Delhi</span>
-                              </div>
-                              
-                              <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneeCity">Consigner City</label>
-                                  <span class="form-control col-lg-4" id="ConsogneeCity">Mumbai</span>
-                                  
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsignerCity">Consognee City</label>
-                                  <span class="form-control col-lg-4" id="ConsignerCity">Delhi</span>
-                              </div>
-                              
-                              <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsignerPincodenumber">Consigner PinCode</label>
-                                  <span class="form-control col-lg-4" id="ConsignerPincodenumber">110001</span>
-                                  
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneePincodenumber">Consognee PinCode</label>
-                                  <span class="form-control col-lg-4" id="ConsogneePincodenumber">400001</span>
-                              </div>
-                              
-                              <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsignerCIN">Consigner CIN</label>
-                                  <span class="form-control col-lg-4" id="ConsignerCIN">CIN123456789</span>
-                                  
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneeCIN">Consognee CIN</label>
-                                  <span class="form-control col-lg-4" id="ConsogneeCIN">CIN987654321</span>
-                              </div>
-                              
-                              <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsignerGST">Consigner GST</label>
-                                  <span class="form-control col-lg-4" id="ConsignerGST">27AAACG1234C1ZV</span>
-                                  
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsogneeGST">Consognee GST</label>
-                                  <span class="form-control col-lg-4" id="ConsogneeGST">27AABCD1234C1ZV</span>
-                              </div>
-                              
-                              
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="consignerAddress">Consignee Address</label>
+                                  <span class="form-control col-lg-4" id="consignerAddress">5678 Another Street, Delhi,110001, Delhi</span>
+                                </div>
+
                                 <div class="row mb-3">
                                     <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="InvoiceNumber">Invoice Number<span class="txt-danger">*</span></label>
                                     <input class="form-control col-lg-4" type="number" placeholder="Enter Invoice Number" id="InvoiceNumber">
@@ -373,98 +369,113 @@
                                     <input class="form-control col-lg-4" type="Date" id="InvoiceDateOfInvoice">
                                 </div> 
                                 <div class="row mb-3">
-                                    
-                                </div> 
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Division">Division<span class="txt-danger">*</span></label>
+                                  <select name="" id="Division" class="form-control col-lg-10">
+                                      <option value="">Select Division</option>
+                                      <option value="">Milk</option>
+                                      <option value="">def</option>
+                                      <option value="">xyz</option>
+                                  </select>
+                                </div>
                                 <div class="row mb-3">
                                     <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="quantity">Quantity<span class="txt-danger">*</span></label>
                                     <input class="form-control col-lg-4" type="number" id="quantity" placeholder="Enter Quantity">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="ConsignerParameter">Parameter<span class="txt-danger">*</span></label>
-                                    <select name="" id="ConsignerParameter" class="form-control col-lg-4">
-                                        <option value="">Select Parameter</option>
-                                        <option value="">Ltr</option>
-                                        <option value="">KG</option>
-                                        <option value="">Ton</option>
-                                    </select>
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Weight">Weight<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="number" id="Weight" placeholder="Enter Weight">
                                 </div> 
                                 
                                 <div class="row mb-3">
-                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Weight">Weight<span class="txt-danger">*</span></label>
-                                    <input class="form-control col-lg-4" type="number" id="Weight" placeholder="Enter Weight">
                                     <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="value">Value(Rs./-)<span class="txt-danger">*</span></label>
                                     <input class="form-control col-lg-4" type="number" placeholder="Enter value" id="value">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="tripNo">Trip No.<span class="txt-danger">*</span></label>
+                                    <input class="form-control col-lg-4" type="number" placeholder="Enter Trip Number" id="tripNo">
                                 </div>
                                 
-                       
-                               </div>
                                 <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Description">Product Description<span class="txt-danger">*</span></label>
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="Description">Product Description</label>
                                   <textarea class="form-control col-lg-10" id="Description"></textarea>
+                                </div>   
+
+                                <div class="row mb-3 text-center">
+                                  <div class="col">
+                                    <button class="btn btn-primary">Add</button>
+                                  </div>
                                 </div>
 
-                                <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDivision">Division</label>
-                                  <div class="col-lg-10 d-flex gap-4 my-2">
-                                    <div>
-                                        <input class="form-check-input" type="checkbox" value="Division1" id="division1">
-                                        <label class="form-check-label" for="division1">
-                                            Milk
-                                        </label>
+                                <div class="row">
+                                  <!-- Daily Entry Table Start -->
+                                  <div class="col-sm-12">
+                                    <div class="card">
+                                      <div class="card-block row">
+                                        <div class="col-sm-12 col-lg-12 col-xl-12">
+                                          <div class="table-responsive">
+                                            <table class="table table-dashed">
+                                              <thead>
+                                                <tr class="bg-light">
+                                                  <th scope="col" class="text-center">No</th>
+                                                  <th scope="col" class="text-center">Invoice Number</th>
+                                                  <th scope="col" class="text-center">Invoice Date</th>
+                                                  <th scope="col" class="text-center">Consigner</th>
+                                                  <th scope="col" class="text-center">Consignee</th>
+                                                  <th scope="col" class="text-center">Quantity</th>
+                                                  <th scope="col" class="text-center">Weight</th>
+                                                  <th scope="col" class="text-center">Value</th>
+                                                  <th scope="col" class="text-center">Division</th>
+                                                  <th scope="col" class="text-center">Action</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr>
+                                                  <th scope="row" class="text-center table-data">1</th>
+                                                  <td class="text-center table-data">INV20241224001</td>
+                                                  <td class="text-center table-data">24/12/2024</td>
+                                                  <td class="text-center table-data">ABC Industries</td>
+                                                  <td class="text-center table-data">XYZ Enterprises</td>
+                                                  <td class="text-center table-data">10</td>
+                                                  <td class="text-center table-data">150 kg</td>
+                                                  <td class="text-center table-data">5,000</td>
+                                                  <td class="text-center table-data">Milk</td>
+                                                  <td class="text-center">
+                                                    <ul class="action d-flex justify-content-center gap-1">
+                                                      <li class="delete">
+                                                        <a href="#" class="bg-danger p-2 rounded">
+                                                          <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                                        </a>
+                                                      </li>
+                                                    </ul>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row" class="text-center table-data">2</th>
+                                                  <td class="text-center table-data">INV20241225002</td>
+                                                  <td class="text-center table-data">25/12/2024</td>
+                                                  <td class="text-center table-data">Global Solutions</td>
+                                                  <td class="text-center table-data">TechnoCorp</td>
+                                                  <td class="text-center table-data">20</td>
+                                                  <td class="text-center table-data">300 kg</td>
+                                                  <td class="text-center table-data">12,000</td>
+                                                  <td class="text-center table-data">Milk Powder</td>
+                                                  <td class="text-center">
+                                                    <ul class="action d-flex justify-content-center gap-1">
+                                                      <li class="delete">
+                                                        <a href="#" class="bg-danger p-2 rounded">
+                                                          <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                                        </a>
+                                                      </li>
+                                                    </ul>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
-                                    <div>
-                                        <input class="form-check-input" type="checkbox" value="Division2" id="division2">
-                                        <label class="form-check-label" for="division2">
-                                            abc
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input class="form-check-input" type="checkbox" value="Division3" id="division3">
-                                        <label class="form-check-label" for="division3">
-                                            xyz
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <input class="form-check-input" type="checkbox" value="Division4" id="division4">
-                                        <label class="form-check-label" for="division4">
-                                            def
-                                        </label>
-                                    </div>
-                                </div>
-                              </div> 
-                                <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDescription">Is Door Delevory</label>
-                                  <div class="col-lg-4 pt-2">
-                                    <input type="radio" id="yes" name="fav_language" value="yes">
-                                    <label for="yes" class="form-label">Yes</label>
-                                    <input type="radio" id="no" name="fav_language" value="No">
-                                    <label for="no" class="form-label">No</label>
                                   </div>
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDescription">Is To be Billed</label>
-                                  <div class="col-lg-4 pt-2">
-                                    <input type="radio" id="Billedyes" name="buildNo" value="yes">
-                                    <label for="Billedyes" class="form-label">Yes</label>
-                                    <input type="radio" id="Billedno" name="buildNo" value="No">
-                                    <label for="Billedno" class="form-label">No</label>
-                                  </div>
+                    
+                                  <!-- Daily Entry Table Start -->
                                 </div>
-                                <div class="card-wrapper border rounded-3 light-card checkbox-checked mt-5">
-                                  <h4>Select Depot</h4>
-                                  <div class="card-body">
-                                <div class="row mb-3">
-                                  <div class="col-md-12">
-                                      <label class="form-label" for="MaltipleDropdown">Depot<span
-                                        class="txt-danger">*</span></label>
-                                      <select id="stateSelect" class="js-example-basic-multiple" name="states[]" multiple="multiple">
-                                        <option value="AL">depo 1</option>
-                                        <option value="AK">Depo 2</option>
-                                        <option value="AZ">depo 3</option>
-                                      </select>
-                                  </div>
-                              </div>
-                            </div>
-                       
-                                </div>
-                              </div>
-                            </div>
                                 <div class="btn-showcase text-center">
                                   <button class="btn btn-primary" type="submit">Save</button>
                                   <button class="btn btn-dark" type="reset">Reset</button>
@@ -513,16 +524,6 @@
   <!-- Include Bootstrap JS (optional, for enhanced styling) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    $(document).ready(function() {
-      // Initialize Select2 with tagging enabled
-      $('#stateSelect').select2({
-        placeholder: 'Select states',
-        allowClear: true,
-        tags: true
-      });
-    });
-  </script>
     <!-- calendar js-->
     <script src="./assets/js/datepicker/date-picker/datepicker.js"></script>
     <script src="./assets/js/datepicker/date-picker/datepicker.en.js"></script>

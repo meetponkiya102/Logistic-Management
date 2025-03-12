@@ -257,6 +257,22 @@
                     <li><a href="book-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Book List</a></li>
                   </ul>
               </li>
+              <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                  <span class="lan-9">Division</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="add-division.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Division</a></li>
+                  <li><a href="division-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Division List</a></li>
+                </ul>
+            </li>
+            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                <i class="fa fa-user text-white" aria-hidden="true"></i>
+                  <span class="lan-9">Company</span></a>
+                <ul class="sidebar-submenu">
+                  <li><a href="add-company.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Add Company</a></li>
+                  <li><a href="company-list.html"><i class="fa fa-list text-white" aria-hidden="true"></i> Company List</a></li>
+                </ul>
+            </li>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
             </div>
           </nav>
@@ -293,154 +309,164 @@
                         <div class="col-xxl-12 col-xl-12 col-12">
                           <div class="tab-content" id="wizard-tabContent">
                             <div class="tab-pane fade show active px-4" id="wizard-contact" role="tabpanel" aria-labelledby="wizard-contact-tab">
-                              <form class="needs-validation custom-input" novalidate="">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="card-body">
-                                          <div class="row mb-3">
-                                              <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LRNumber">LR Number<span class="txt-danger">*</span></label>
-                                              <input class="form-control col-lg-10" type="number" placeholder="Enter LR Number" id="LRNumber">
-                                          </div>
-                                          <div class="row mb-3">
-                                              <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="VehicleName">Vehicle Name<span class="txt-danger">*</span></label>
-                                              <select class="form-control col-lg-4" id="VehicleName">
-                                                  <option value="">Select Vehicle</option>
-                                                  <option value="Truck1">Truck 1</option>
-                                                  <option value="Truck2">Truck 2</option>
-                                                  <option value="Truck3">Truck 3</option>
-                                                  <option value="Van1">Van 1</option>
-                                                  <option value="Van2">Van 2</option>
-                                              </select>
-                                              
-                                              <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="DriverName">Driver Name</label>
-                                              <select class="form-control col-lg-4" id="DriverName">
-                                                  <option value="">Select Driver</option>
-                                                  <option value="Driver1">Aarav Sharma</option>
-                                                  <option value="Driver2">Ishaan Patel</option>
-                                                  <option value="Driver3">Vivaan Reddy</option>
-                                                  <option value="Driver4">Ravi Kumar</option>
-                                                  <option value="Driver5">Priya Singh</option>
-                                              </select>
-                                          </div>
-                                          <div class="row mb-3">
-                                              <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LicenceNumber">Licence Number<span class="txt-danger">*</span></label>
-                                              <input class="form-control col-lg-4" type="number" placeholder="Enter Licence Number" id="LicenceNumber" readonly value="8520963">
-                                          </div>
-                                      </div>                                      
+                              <form class="needs-validation custom-input" novalidate="">                                 
+                                <div class="card-body">                                  
+                                  <div class="row mb-3">                                       
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LRNumber">LR Number<span class="txt-danger">*</span></label>                                       
+                                    <input class="form-control col-lg-10" type="text" value="LR30301" id="LRNumber" disabled>                                     
+                                  </div>  
+                                  <div class="row mb-3">                                       
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LRDate">LR Date<span class="txt-danger">*</span></label>                                       
+                                    <input class="form-control col-lg-4" type="date" id="LRDate">                                     
+                                  </div>                                    
+                                  <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2">Is Transporter?</label>
+                                    <div class="col-lg-6 pt-2 d-flex gap-2">
+                                      <div class="yes">
+                                        <input type="radio" id="yes" name="fav_language" value="yes">
+                                        <label for="yes" class="form-label">Yes</label>
+                                      </div>
+                                      <div class="no">
+                                        <input type="radio" id="no" name="fav_language" value="No" checked>
+                                        <label for="no" class="form-label">No</label>
+                                      </div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                  <div class="card-header">
-                                      <h4>Delivery Details</h4>
                                   </div>
-                                  <div class="card-body">
-                                      <div class="row mb-3">
-                                          <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="transporter">Transporter<span class="txt-danger">*</span></label>
-                                          <select class="form-control col-lg-10" id="transporter">
-                                              <option value="">Select Transporter</option>
-                                              <option value="ABC Logistics">ABC Logistics</option>
-                                              <option value="XYZ Transporters">XYZ Transporters</option>
-                                              <option value="LMN Movers">LMN Movers</option>
-                                          </select>
-                                      </div>
-                                      <div class="row mb-3">
-                                          <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDiscripition">Description</label>
-                                          <textarea class="form-control col-lg-9" id="txtDiscripition" rows="4" placeholder="Enter Description"></textarea>
-                                      </div>
-                                      <div class="row mb-3">
-                                          <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LRDate">LR Date<span class="txt-danger">*</span></label>
-                                          <input class="form-control col-lg-4" type="date" id="LRDate">
-                                      </div>
-                                  </div>
-                              </div>
-                              
-                                <div class="card">
-                                  <div class="card-header">
-                                      <h4>Invoice List</h4>
-                                  </div>
-                                  <div class="card-body">
-                                    <table class="table table-dashed">
-                                      <thead>
-                                          <tr class="bg-light">
-                                              <th scope="col" class="text-center">Invoice Number</th>
-                                              <th scope="col" class="text-center">Consignee</th>
-                                              <th scope="col" class="text-center">Consigner</th>
-                                              <th scope="col" class="text-center">Quantity</th>
-                                              <th scope="col" class="text-center">Serial Number</th>
-                                              <th scope="col" class="text-center">Action</th> <!-- New Action Column -->
-                                          </tr>
-                                      </thead>
-                                      <tbody>
-                                          <tr>
-                                              <td class="text-center table-data">INV001</td>
-                                              <td class="text-center table-data">Ravi Kumar</td>
-                                              <td class="text-center table-data">Shivani Verma</td>
-                                              <td class="text-center table-data">10</td>
-                                              <td class="text-center table-data">SN001234</td>
-                                              <td class="text-center">
-                                                  <ul class="action d-flex justify-content-center">
-                                                      <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                                  </ul>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td class="text-center table-data">INV002</td>
-                                              <td class="text-center table-data">Anjali Sharma</td>
-                                              <td class="text-center table-data">Suresh Gupta</td>
-                                              <td class="text-center table-data">5</td>
-                                              <td class="text-center table-data">SN001235</td>
-                                              <td class="text-center">
-                                                  <ul class="action d-flex justify-content-center">
-                                                      <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                                  </ul>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td class="text-center table-data">INV003</td>
-                                              <td class="text-center table-data">Prakash Patel</td>
-                                              <td class="text-center table-data">Aarti Desai</td>
-                                              <td class="text-center table-data">8</td>
-                                              <td class="text-center table-data">SN001236</td>
-                                              <td class="text-center">
-                                                  <ul class="action d-flex justify-content-center">
-                                                      <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                                  </ul>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td class="text-center table-data">INV004</td>
-                                              <td class="text-center table-data">Sita Rao</td>
-                                              <td class="text-center table-data">Vikram Yadav</td>
-                                              <td class="text-center table-data">15</td>
-                                              <td class="text-center table-data">SN001237</td>
-                                              <td class="text-center">
-                                                  <ul class="action d-flex justify-content-center">
-                                                      <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                                  </ul>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td class="text-center table-data">INV005</td>
-                                              <td class="text-center table-data">Vijay Singh</td>
-                                              <td class="text-center table-data">Priya Mehta</td>
-                                              <td class="text-center table-data">20</td>
-                                              <td class="text-center table-data">SN001238</td>
-                                              <td class="text-center">
-                                                  <ul class="action d-flex justify-content-center">
-                                                      <li class="delete"><a href="#" class="bg-danger p-2 rounded"><i class="fa fa-trash-o text-white" aria-hidden="true"></i></a></li>
-                                                  </ul>
-                                              </td>
-                                          </tr>
-                                      </tbody>
-                                  </table>
                                   
+                                  <div class="row mb-3" id="transporter-row">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="transporter">Transporter<span class="txt-danger">*</span></label>
+                                    <select class="form-control col-lg-10" id="transporter">
+                                      <option value="">Select Transporter</option>
+                                      <option value="ABC Logistics">ABC Logistics</option>
+                                      <option value="XYZ Transporters">XYZ Transporters</option>
+                                      <option value="LMN Movers">LMN Movers</option>
+                                    </select>
+                                  </div>                                                                       
+                                  <div class="row mb-3">                                       
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="VehicleName">Vehicle Name<span class="txt-danger">*</span></label>                                       
+                                    <select class="form-control col-lg-4" id="VehicleName">                                         
+                                      <option value="">Select Vehicle</option>                                         
+                                      <option value="Truck1">Truck 1</option>                                         
+                                      <option value="Truck2">Truck 2</option>                                         
+                                      <option value="Truck3">Truck 3</option>                                         
+                                      <option value="Van1">Van 1</option>                                         
+                                      <option value="Van2">Van 2</option>                                       
+                                    </select>                                                                             
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="DriverName">Driver Name</label>                                       
+                                    <select class="form-control col-lg-4" id="DriverName">                                         
+                                      <option value="">Select Driver</option>                                         
+                                      <option value="Driver1">Aarav Sharma</option>                                         
+                                      <option value="Driver2">Ishaan Patel</option>                                         
+                                      <option value="Driver3">Vivaan Reddy</option>                                         
+                                      <option value="Driver4">Ravi Kumar</option>                                         
+                                      <option value="Driver5">Priya Singh</option>                                       
+                                    </select>                                     
+                                  </div>                                      
+                                  <div class="row mb-3">                                       
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="LicenceNumber">Licence Number<span class="txt-danger">*</span></label>                                       
+                                    <input class="form-control col-lg-4" type="number" placeholder="Enter Licence Number" id="LicenceNumber" disabled value="8520963">                                     
+                                  </div>                                                                        
+                                                                                 
+                                  <div class="row mb-3">                                       
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDiscripition">Description</label>                                       
+                                    <textarea class="form-control col-lg-9" id="txtDiscripition" rows="4" placeholder="Enter Description"></textarea>                                     
+                                  </div>       
+
+                                  <div class="row mb-3">
+                                    <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="txtDescription">Is Door Delivery</label>
+                                    <div class="col-lg-4 pt-2">
+                                      <input type="radio" id="yesBtn" name="fav_language" value="yes">
+                                      <label for="yes" class="form-label">Yes</label>
+                                      <input type="radio" id="toPay" name="fav_language" value="No">
+                                      <label for="no" class="form-label">To Pay</label>
+                                    </div>
                                   </div>
-                              </div>
-                                <div class="btn-showcase text-center">
-                                  <button class="btn btn-primary" type="submit">Save</button>
-                                  <button class="btn btn-dark" type="reset">Reset</button>
-                                </div>
-                              </form> 
+                                  
+                                  <div class="row mb-3" id="totalFreightRow">
+                                    <label class="form-label col-lg-3 col-md-4 col-sm-12 text-start my-2" for="txtDescription">Total CustomerFreight</label>
+                                    <input type="text" class="form-control col-lg-4" disabled value="5000">
+                                  </div>
+                                  
+                                  <!-- Invoice List Section -->                                                
+                                  <div class="row mb-3">                                       
+                                    <h4>Invoice List</h4>                                       
+                                    <div class="col-sm-12">
+                                      <div class="card">
+                                        <div class="card-block row">
+                                          <div class="col-sm-12 col-lg-12 col-xl-12">
+                                            <div class="table-responsive">
+                                              <table class="table table-dashed">
+                                                <thead>
+                                                  <tr class="bg-light">
+                                                    <th scope="col" class="text-center">No</th>
+                                                    <th scope="col" class="text-center">Invoice Number</th>
+                                                    <th scope="col" class="text-center">Invoice Date</th>
+                                                    <th scope="col" class="text-center">Consigner</th>
+                                                    <th scope="col" class="text-center">Consignee</th>
+                                                    <th scope="col" class="text-center">Quantity</th>
+                                                    <th scope="col" class="text-center">Weight</th>
+                                                    <th scope="col" class="text-center">Value</th>
+                                                    <th scope="col" class="text-center">Division</th>
+                                                    <th scope="col" class="text-center">Action</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <th scope="row" class="text-center table-data">1</th>
+                                                    <td class="text-center table-data">INV20241224001</td>
+                                                    <td class="text-center table-data">24/12/2024</td>
+                                                    <td class="text-center table-data">ABC Industries</td>
+                                                    <td class="text-center table-data">XYZ Enterprises</td>
+                                                    <td class="text-center table-data">10</td>
+                                                    <td class="text-center table-data">150 kg</td>
+                                                    <td class="text-center table-data">5,000</td>
+                                                    <td class="text-center table-data">Milk</td>
+                                                    <td class="text-center">
+                                                      <ul class="action d-flex justify-content-center gap-1">
+                                                        <li class="delete">
+                                                          <a href="#" class="bg-danger p-2 rounded">
+                                                            <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                                          </a>
+                                                        </li>
+                                                      </ul>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row" class="text-center table-data">2</th>
+                                                    <td class="text-center table-data">INV20241225002</td>
+                                                    <td class="text-center table-data">25/12/2024</td>
+                                                    <td class="text-center table-data">Global Solutions</td>
+                                                    <td class="text-center table-data">TechnoCorp</td>
+                                                    <td class="text-center table-data">20</td>
+                                                    <td class="text-center table-data">300 kg</td>
+                                                    <td class="text-center table-data">12,000</td>
+                                                    <td class="text-center table-data">Milk Powder</td>
+                                                    <td class="text-center">
+                                                      <ul class="action d-flex justify-content-center gap-1">
+                                                        <li class="delete">
+                                                          <a href="#" class="bg-danger p-2 rounded">
+                                                            <i class="fa fa-trash-o text-white" aria-hidden="true"></i>
+                                                          </a>
+                                                        </li>
+                                                      </ul>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                              
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>                                     
+                                  </div>                                     
+                                  <!-- Form Actions -->                                      
+                                  <div class="btn-showcase text-center">                                       
+                                    <button class="btn btn-primary" type="submit">Save</button>                                       
+                                    <button class="btn btn-dark" type="reset">Reset</button>                                     
+                                  </div>                                   
+                                </div>                             
+                              </form>
                             </div>
                           </div>
                         </div>
@@ -486,5 +512,52 @@
     <!-- Theme js-->
     <script src="./assets/js/script.js"></script> 
     <!-- <script src="./assets/js/theme-customizer/customizer.js"></script> -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const transporterRow = document.getElementById('transporter-row');
+        const yesRadioButton = document.getElementById('yes');
+        const noRadioButton = document.getElementById('no');
+    
+        // Initially hide the transporter row
+        transporterRow.style.display = 'none';
+    
+        // Function to handle the display of the transporter row based on radio selection
+        function toggleTransporterRow() {
+          if (yesRadioButton.checked) {
+            transporterRow.style.display = 'flex'; // Show the row when "Yes" is selected
+          } else {
+            transporterRow.style.display = 'none'; // Hide the row when "No" is selected
+          }
+        }
+    
+        // Event listeners for radio buttons
+        yesRadioButton.addEventListener('change', toggleTransporterRow);
+        noRadioButton.addEventListener('change', toggleTransporterRow);
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const totalFreightRow = document.getElementById('totalFreightRow');
+        const yesRadioButton = document.getElementById('yesBtn');
+        const toPayRadioButton = document.getElementById('toPay');
+        
+        // Initially hide the Total Customer Freight row
+        totalFreightRow.style.display = 'none';
+        
+        // Function to handle the display of the Total Customer Freight row based on radio selection
+        function toggleFreightRow() {
+          if (toPayRadioButton.checked) {
+            totalFreightRow.style.display = 'flex'; // Show the row when "To Pay" is selected
+          } else {
+            totalFreightRow.style.display = 'none'; // Hide the row when "Yes" is selected
+          }
+        }
+        
+        // Event listeners for radio buttons
+        yesRadioButton.addEventListener('change', toggleFreightRow);
+        toPayRadioButton.addEventListener('change', toggleFreightRow);
+      });
+    </script>
+    
   </body>
 </html>
