@@ -39,6 +39,31 @@
     <link id="color" rel="stylesheet" href="./assets/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="./assets/css/responsive.css">
+
+      <!-- Select2 CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet">
+
+    <style>
+      /* Fix styling issues */
+      .bootstrap-tagsinput {
+          width: 100%;
+          min-height: 40px;
+          padding: 5px;
+          border: 1px solid #ced4da;
+          border-radius: 5px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+      }
+      .bootstrap-tagsinput .tag {
+          background-color: #007bff;
+          color: white;
+          padding: 5px 10px;
+          border-radius: 15px;
+          margin: 2px;
+          display: inline-block;
+      }
+  </style>
   </head>
   <body> 
     <!-- loader starts-->
@@ -367,7 +392,65 @@
                                   <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="member-address">Address</label>
                                   <textarea class="form-control border col-lg-10" id="member-address" rows="3"></textarea>
                                 </div>
-                                <div class="btn-showcase text-end">
+                                <div class="row mb-3">
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="multi-select">
+                                      Select Depot
+                                  </label>
+                                  <div class="col-lg-4">
+                                      <select id="multi-select" class="form-select" multiple="multiple" style="width: 100%;">
+                                          <option value="Depot1">Depot 1</option>
+                                          <option value="Depot2">Depot 2</option>
+                                          <option value="Depot3">Depot 3</option>
+                                          <option value="Depot4">Depot 4</option>
+                                          <option value="Depot5">Depot 5</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                                <div class="row mb-3">
+                                  <table class="table table-dashed">
+                                    <thead>
+                                      <tr class="bg-light">
+                                        <th class="text-center" scope="col">Menu</th>
+                                        <th class="text-center" scope="col">View</th>
+                                        <th class="text-center" scope="col">AddEdit</th>
+                                        <th class="text-center" scope="col">Delete</th>
+                                        <th class="text-center" scope="col">Cancle</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="text-center">Invoice</td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-center">Lorry Report</td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-center">Dispatch Challan</td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-center">Freight Memo</td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                        <td class="text-center"><input type="checkbox" class="select-item" /></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <div class="btn-showcase text-center">
                                   <button class="btn btn-primary" type="submit">Save</button>
                                   <button class="btn btn-dark" type="reset">Reset</button>
                                 </div>
@@ -404,7 +487,16 @@
     <script src="./assets/js/slick/slick.js"></script>
     <script src="./assets/js/header-slick.js"></script>
     <script src="./assets/js/chart/apex-chart/apex-chart.js"></script>
-    
+    <script>
+      $(document).ready(function() {
+          $('#multi-select').select2({
+              placeholder: "Select Depot",
+              allowClear: true
+          });
+      });
+  </script>
+  <!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
     <!-- calendar js-->
     <script src="./assets/js/datepicker/date-picker/datepicker.js"></script>
     <script src="./assets/js/datepicker/date-picker/datepicker.en.js"></script>
