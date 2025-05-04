@@ -340,27 +340,15 @@
                               
                                 <!-- Activity and Hours Worked Dropdown -->
                                 <div class="row mb-3">
-                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="activitySelect">Activity<span class="txt-danger">*</span></label>
-                                  <select name="activitySelect" id="activitySelect" class="form-control col-lg-4" required>
-                                    <option value="">Select Activity</option>
-                                    <option value="loading">Loading</option>
-                                    <option value="sorting">Sorting</option>
-                                    <option value="unloading">Unloading</option>
-                                  </select>
-                                  
                                   <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="hoursWorked">Hours Worked<span class="txt-danger">*</span></label>
-                                  <select name="hoursWorked" id="hoursWorked" class="form-control col-lg-4" required>
-                                    <option value="">Select Hours Worked</option>
-                                    <option value="1">1 hour</option>
-                                    <option value="2">2 hours</option>
-                                    <option value="3">3 hours</option>
-                                    <option value="4">4 hours</option>
-                                    <option value="5">5 hours</option>
-                                    <option value="6">6 hours</option>
-                                    <option value="7">7 hours</option>
-                                  </select>
+                                  <input class="form-control input-validation-error col-lg-4" type="number" placeholder="Total Hour Work" >
                                 </div>
-                              
+                              <div class="row mb-3">
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="hoursWorked">Pendding Amount<span class="txt-danger">*</span></label>
+                                  <input class="form-control col-lg-4 input-validation-error" type="number" placeholder="Total Hour Work" >
+                                  <label class="form-label col-lg-2 col-md-4 col-sm-12 text-start my-2" for="hoursWorked">Paid Amount<span class="txt-danger">*</span></label>
+                                  <input class="form-control col-lg-4 input-validation-error" type="number" placeholder="Paid Amount" >
+                              </div>
                                 <!-- Submit Button -->
                                 <div class="btn-showcase text-center">
                                   <button class="btn btn-primary" type="submit">Save</button>
